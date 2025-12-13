@@ -1,0 +1,35 @@
+[
+    {
+      "id": "why-i-built-simplecallcenter",
+      "title": "Built with Open Source. Fueled by Frustration. Finished at :33 — and Watched by a Dog.",
+      "description": "What started as a late-night frustration with softswitches turned into a simple, self-building call center platform — powered by open source and a strange obsession with the number 33.",
+      "category": "Behind the Platform",
+      "date": "2025-01-20",
+      "author": {
+        "name": "5 min read",
+        "avatar": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
+      }
+    },
+    {
+        "id": 1,
+        "title": "How to quickly deploy a static website",
+        "description": "Static websites are now used to bootstrap lots of websites and are becoming the basis for a variety of tools that influence both web designers and developers.",
+        "category": "Under the Hood",
+        "date": "2025-05-14",
+        "author": {
+          "name": "Jese Leos",
+          "avatar": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
+        }
+      },
+    {
+      "id": 2,
+      "title": "Our first project with React",
+      "description": "Static websites are now used to bootstrap lots of websites and are becoming the basis for a variety of tools that influence both web designers and developers.",
+      "category": "Product Announcements",
+      "date": "2025-05-14",
+      "author": {
+        "name": "Bonnie Green",
+        "avatar": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
+      }
+    }
+  ]
