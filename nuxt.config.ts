@@ -70,7 +70,9 @@ export default defineNuxtConfig({
     preset: 'static', // Use static preset for DigitalOcean
     compressPublicAssets: true,
     prerender: {
-      crawlLinks: true
+      crawlLinks: true,
+      ignore: ['/404'],
+      failOnError: false
     }
   },
   sourcemap: {

@@ -18,144 +18,168 @@
       </div>
 
       <!-- Usage Rates Section -->
-      <div class="max-w-7xl mx-auto mb-20">
-        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 p-8 lg:p-12">
-          <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4 text-center">
+      <div class="max-w-7xl mx-auto mb-12 lg:mb-20">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 lg:p-12">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 text-center">
             Usage Rates
           </h2>
-          <p class="text-xl text-gray-600 dark:text-gray-400 mb-10 text-center max-w-3xl mx-auto">
+          <p class="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-400 mb-6 sm:mb-8 lg:mb-10 text-center max-w-3xl mx-auto px-2">
             The per-minute and AI rates are the same for all call center plans and direct numbers. We first deduct usage from your included monthly balance. Once it's used up, out-of-subscription rates apply.
           </p>
 
           <!-- Voice Rates Table -->
-          <div class="mb-12">
-            <div class="flex items-center mb-6">
-              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 dark:from-purple-400 dark:to-purple-500 text-white shadow-lg flex items-center justify-center mr-4">
-                <i class="uil uil-phone text-2xl"></i>
+          <div class="mb-8 sm:mb-12">
+            <div class="flex items-center mb-4 sm:mb-6">
+              <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 dark:from-purple-400 dark:to-purple-500 text-white shadow-lg flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0">
+                <i class="uil uil-phone text-xl sm:text-2xl"></i>
               </div>
-              <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Voice Rates</h3>
+              <h3 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Voice Rates</h3>
             </div>
-            <div class="overflow-x-auto">
-              <table class="w-full">
-                <thead>
-                  <tr class="border-b-2 border-gray-200 dark:border-gray-700">
-                    <th class="text-left py-4 px-6 font-semibold text-gray-900 dark:text-white">Type</th>
-                    <th class="text-center py-4 px-6 font-semibold text-gray-900 dark:text-white">In Subscription</th>
-                    <th class="text-center py-4 px-6 font-semibold text-gray-900 dark:text-white">Out of Subscription</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr
-                    v-for="(rate, ridx) in voiceRates"
-                    :key="ridx"
-                    class="border-b border-gray-100 dark:border-gray-700 hover:bg-purple-50/50 dark:hover:bg-purple-900/20 transition-all duration-200"
-                  >
-                    <td class="py-4 px-6 text-gray-700 dark:text-gray-300 font-medium">{{ rate.type }}</td>
-                    <td class="py-4 px-6 text-center">
-                      <span class="inline-flex items-center px-3 py-1 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 font-bold">
-                        ${{ rate.inSubscription }}
-                      </span>
-                    </td>
-                    <td class="py-4 px-6 text-center">
-                      <span class="inline-flex items-center px-3 py-1 rounded-lg bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400 font-bold">
-                        ${{ rate.outOfSubscription }}
-                      </span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="overflow-x-auto -mx-4 sm:mx-0">
+              <div class="inline-block min-w-full align-middle px-4 sm:px-0">
+                <table class="w-full min-w-[600px]">
+                  <thead>
+                    <tr class="border-b-2 border-gray-200 dark:border-gray-700">
+                      <th class="text-left py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-sm sm:text-base">Type</th>
+                      <th class="text-center py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-xs sm:text-base">
+                        <span class="hidden sm:inline">In Subscription</span>
+                        <span class="sm:hidden">In Sub</span>
+                      </th>
+                      <th class="text-center py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-xs sm:text-base">
+                        <span class="hidden sm:inline">Out of Subscription</span>
+                        <span class="sm:hidden">Out of Sub</span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr
+                      v-for="(rate, ridx) in voiceRates"
+                      :key="ridx"
+                      class="border-b border-gray-100 dark:border-gray-700 hover:bg-purple-50/50 dark:hover:bg-purple-900/20 transition-all duration-200"
+                    >
+                      <td class="py-3 px-3 sm:py-4 sm:px-6 text-gray-700 dark:text-gray-300 font-medium text-sm sm:text-base">{{ rate.type }}</td>
+                      <td class="py-3 px-3 sm:py-4 sm:px-6 text-center">
+                        <span class="inline-flex items-center px-2 py-1 sm:px-3 sm:py-1 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 font-bold text-xs sm:text-sm">
+                          ${{ rate.inSubscription }}
+                        </span>
+                      </td>
+                      <td class="py-3 px-3 sm:py-4 sm:px-6 text-center">
+                        <span class="inline-flex items-center px-2 py-1 sm:px-3 sm:py-1 rounded-lg bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400 font-bold text-xs sm:text-sm">
+                          ${{ rate.outOfSubscription }}
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-            <div class="mt-6 p-4 rounded-xl bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800">
-              <p class="text-sm text-gray-700 dark:text-gray-300 font-medium">
+            <div class="mt-4 sm:mt-6 p-3 sm:p-4 rounded-xl bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800">
+              <p class="text-xs sm:text-sm text-gray-700 dark:text-gray-300 font-medium">
                 <strong class="text-purple-600 dark:text-purple-400">Internal calls between your users are free.</strong> We only bill minutes for calls that touch the phone network (PSTN) or external numbers.
               </p>
             </div>
           </div>
 
           <!-- Call Recording Table -->
-          <div class="mb-12">
-            <div class="flex items-center mb-6">
-              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 dark:from-purple-400 dark:to-purple-500 text-white shadow-lg flex items-center justify-center mr-4">
-                <i class="uil uil-record-video text-2xl"></i>
+          <div class="mb-8 sm:mb-12">
+            <div class="flex items-center mb-4 sm:mb-6">
+              <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 dark:from-purple-400 dark:to-purple-500 text-white shadow-lg flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0">
+                <i class="uil uil-record-video text-xl sm:text-2xl"></i>
               </div>
-              <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Call Recording</h3>
+              <h3 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Call Recording</h3>
             </div>
-            <div class="overflow-x-auto">
-              <table class="w-full">
-                <thead>
-                  <tr class="border-b-2 border-gray-200 dark:border-gray-700">
-                    <th class="text-left py-4 px-6 font-semibold text-gray-900 dark:text-white">Type</th>
-                    <th class="text-center py-4 px-6 font-semibold text-gray-900 dark:text-white">In Subscription</th>
-                    <th class="text-center py-4 px-6 font-semibold text-gray-900 dark:text-white">Out of Subscription</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="border-b border-gray-100 dark:border-gray-700 hover:bg-purple-50/50 dark:hover:bg-purple-900/20 transition-all duration-200">
-                    <td class="py-4 px-6 text-gray-700 dark:text-gray-300 font-medium">Call recording / minute</td>
-                    <td class="py-4 px-6 text-center">
-                      <span class="inline-flex items-center px-3 py-1 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 font-bold">
-                        ${{ recordingRates.inSubscription }}
-                      </span>
-                    </td>
-                    <td class="py-4 px-6 text-center">
-                      <span class="inline-flex items-center px-3 py-1 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 font-bold">
-                        ${{ recordingRates.outOfSubscription }}
-                      </span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="overflow-x-auto -mx-4 sm:mx-0">
+              <div class="inline-block min-w-full align-middle px-4 sm:px-0">
+                <table class="w-full min-w-[600px]">
+                  <thead>
+                    <tr class="border-b-2 border-gray-200 dark:border-gray-700">
+                      <th class="text-left py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-sm sm:text-base">Type</th>
+                      <th class="text-center py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-xs sm:text-base">
+                        <span class="hidden sm:inline">In Subscription</span>
+                        <span class="sm:hidden">In Sub</span>
+                      </th>
+                      <th class="text-center py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-xs sm:text-base">
+                        <span class="hidden sm:inline">Out of Subscription</span>
+                        <span class="sm:hidden">Out of Sub</span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-b border-gray-100 dark:border-gray-700 hover:bg-purple-50/50 dark:hover:bg-purple-900/20 transition-all duration-200">
+                      <td class="py-3 px-3 sm:py-4 sm:px-6 text-gray-700 dark:text-gray-300 font-medium text-sm sm:text-base">Call recording / minute</td>
+                      <td class="py-3 px-3 sm:py-4 sm:px-6 text-center">
+                        <span class="inline-flex items-center px-2 py-1 sm:px-3 sm:py-1 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 font-bold text-xs sm:text-sm">
+                          ${{ recordingRates.inSubscription }}
+                        </span>
+                      </td>
+                      <td class="py-3 px-3 sm:py-4 sm:px-6 text-center">
+                        <span class="inline-flex items-center px-2 py-1 sm:px-3 sm:py-1 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 font-bold text-xs sm:text-sm">
+                          ${{ recordingRates.outOfSubscription }}
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-            <div class="mt-6 p-4 rounded-xl bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800">
-              <p class="text-sm text-gray-700 dark:text-gray-300 font-medium">
+            <div class="mt-4 sm:mt-6 p-3 sm:p-4 rounded-xl bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800">
+              <p class="text-xs sm:text-sm text-gray-700 dark:text-gray-300 font-medium">
                 <span class="font-bold text-purple-600 dark:text-purple-400">ℹ️</span> Recording can be enabled per queue, per number, or per agent.
               </p>
             </div>
           </div>
 
           <!-- Transcription & AI Table -->
-          <div class="mb-12">
-            <div class="flex items-center mb-6">
-              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 dark:from-purple-400 dark:to-purple-500 text-white shadow-lg flex items-center justify-center mr-4">
-                <i class="uil uil-brain text-2xl"></i>
+          <div class="mb-8 sm:mb-12">
+            <div class="flex items-center mb-4 sm:mb-6">
+              <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 dark:from-purple-400 dark:to-purple-500 text-white shadow-lg flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0">
+                <i class="uil uil-brain text-xl sm:text-2xl"></i>
               </div>
-              <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Transcription & AI</h3>
+              <h3 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Transcription & AI</h3>
             </div>
-            <div class="overflow-x-auto">
-              <table class="w-full">
-                <thead>
-                  <tr class="border-b-2 border-gray-200 dark:border-gray-700">
-                    <th class="text-left py-4 px-6 font-semibold text-gray-900 dark:text-white">Type</th>
-                    <th class="text-center py-4 px-6 font-semibold text-gray-900 dark:text-white">In Subscription</th>
-                    <th class="text-center py-4 px-6 font-semibold text-gray-900 dark:text-white">Out of Subscription</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr
-                    v-for="(item, tidx) in transcriptionRates"
-                    :key="tidx"
-                    class="border-b border-gray-100 dark:border-gray-700 hover:bg-purple-50/50 dark:hover:bg-purple-900/20 transition-all duration-200"
-                  >
-                    <td class="py-4 px-6 text-gray-700 dark:text-gray-300 font-medium">
-                      {{ item.type }}
-                      <span v-if="item.note" class="ml-2 text-xs text-gray-500 dark:text-gray-400">*</span>
-                    </td>
-                    <td class="py-4 px-6 text-center">
-                      <span class="inline-flex items-center px-3 py-1 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 font-bold">
-                        {{ item.inSubscription }}
-                      </span>
-                    </td>
-                    <td class="py-4 px-6 text-center">
-                      <span class="inline-flex items-center px-3 py-1 rounded-lg bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400 font-bold">
-                        {{ item.outOfSubscription }}
-                      </span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="overflow-x-auto -mx-4 sm:mx-0">
+              <div class="inline-block min-w-full align-middle px-4 sm:px-0">
+                <table class="w-full min-w-[600px]">
+                  <thead>
+                    <tr class="border-b-2 border-gray-200 dark:border-gray-700">
+                      <th class="text-left py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-sm sm:text-base">Type</th>
+                      <th class="text-center py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-xs sm:text-base">
+                        <span class="hidden sm:inline">In Subscription</span>
+                        <span class="sm:hidden">In Sub</span>
+                      </th>
+                      <th class="text-center py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-xs sm:text-base">
+                        <span class="hidden sm:inline">Out of Subscription</span>
+                        <span class="sm:hidden">Out of Sub</span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr
+                      v-for="(item, tidx) in transcriptionRates"
+                      :key="tidx"
+                      class="border-b border-gray-100 dark:border-gray-700 hover:bg-purple-50/50 dark:hover:bg-purple-900/20 transition-all duration-200"
+                    >
+                      <td class="py-3 px-3 sm:py-4 sm:px-6 text-gray-700 dark:text-gray-300 font-medium text-sm sm:text-base">
+                        {{ item.type }}
+                        <span v-if="item.note" class="ml-2 text-xs text-gray-500 dark:text-gray-400">*</span>
+                      </td>
+                      <td class="py-3 px-3 sm:py-4 sm:px-6 text-center">
+                        <span class="inline-flex items-center px-2 py-1 sm:px-3 sm:py-1 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 font-bold text-xs sm:text-sm">
+                          {{ item.inSubscription }}
+                        </span>
+                      </td>
+                      <td class="py-3 px-3 sm:py-4 sm:px-6 text-center">
+                        <span class="inline-flex items-center px-2 py-1 sm:px-3 sm:py-1 rounded-lg bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400 font-bold text-xs sm:text-sm">
+                          {{ item.outOfSubscription }}
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-            <div class="mt-6 p-4 rounded-xl bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800">
-              <p class="text-sm text-gray-700 dark:text-gray-300 font-medium">
+            <div class="mt-4 sm:mt-6 p-3 sm:p-4 rounded-xl bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800">
+              <p class="text-xs sm:text-sm text-gray-700 dark:text-gray-300 font-medium">
                 <span class="font-bold text-purple-600 dark:text-purple-400">*</span> Actual cost depends on call duration. Short calls usually cost only a few cents, long calls up to 10–15¢.
               </p>
             </div>
@@ -163,41 +187,49 @@
 
           <!-- Fax & OCR Table (Merged from Fax tab) -->
           <div>
-            <div class="flex items-center mb-6">
-              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 dark:from-purple-400 dark:to-purple-500 text-white shadow-lg flex items-center justify-center mr-4">
-                <i class="uil uil-file-alt text-2xl"></i>
+            <div class="flex items-center mb-4 sm:mb-6">
+              <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 dark:from-purple-400 dark:to-purple-500 text-white shadow-lg flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0">
+                <i class="uil uil-file-alt text-xl sm:text-2xl"></i>
               </div>
-              <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Fax & OCR</h3>
+              <h3 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Fax & OCR</h3>
             </div>
-            <div class="overflow-x-auto">
-              <table class="w-full">
-                <thead>
-                  <tr class="border-b-2 border-gray-200 dark:border-gray-700">
-                    <th class="text-left py-4 px-6 font-semibold text-gray-900 dark:text-white">Type</th>
-                    <th class="text-center py-4 px-6 font-semibold text-gray-900 dark:text-white">In Subscription</th>
-                    <th class="text-center py-4 px-6 font-semibold text-gray-900 dark:text-white">Out of Subscription</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr
-                    v-for="(item, fidx) in faxOcrRates"
-                    :key="fidx"
-                    class="border-b border-gray-100 dark:border-gray-700 hover:bg-purple-50/50 dark:hover:bg-purple-900/20 transition-all duration-200"
-                  >
-                    <td class="py-4 px-6 text-gray-700 dark:text-gray-300 font-medium">{{ item.type }}</td>
-                    <td class="py-4 px-6 text-center">
-                      <span class="inline-flex items-center px-3 py-1 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 font-bold">
-                        ${{ item.inSubscription }}
-                      </span>
-                    </td>
-                    <td class="py-4 px-6 text-center">
-                      <span class="inline-flex items-center px-3 py-1 rounded-lg bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400 font-bold">
-                        ${{ item.outOfSubscription }}
-                      </span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="overflow-x-auto -mx-4 sm:mx-0">
+              <div class="inline-block min-w-full align-middle px-4 sm:px-0">
+                <table class="w-full min-w-[600px]">
+                  <thead>
+                    <tr class="border-b-2 border-gray-200 dark:border-gray-700">
+                      <th class="text-left py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-sm sm:text-base">Type</th>
+                      <th class="text-center py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-xs sm:text-base">
+                        <span class="hidden sm:inline">In Subscription</span>
+                        <span class="sm:hidden">In Sub</span>
+                      </th>
+                      <th class="text-center py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-xs sm:text-base">
+                        <span class="hidden sm:inline">Out of Subscription</span>
+                        <span class="sm:hidden">Out of Sub</span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr
+                      v-for="(item, fidx) in faxOcrRates"
+                      :key="fidx"
+                      class="border-b border-gray-100 dark:border-gray-700 hover:bg-purple-50/50 dark:hover:bg-purple-900/20 transition-all duration-200"
+                    >
+                      <td class="py-3 px-3 sm:py-4 sm:px-6 text-gray-700 dark:text-gray-300 font-medium text-sm sm:text-base">{{ item.type }}</td>
+                      <td class="py-3 px-3 sm:py-4 sm:px-6 text-center">
+                        <span class="inline-flex items-center px-2 py-1 sm:px-3 sm:py-1 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 font-bold text-xs sm:text-sm">
+                          ${{ item.inSubscription }}
+                        </span>
+                      </td>
+                      <td class="py-3 px-3 sm:py-4 sm:px-6 text-center">
+                        <span class="inline-flex items-center px-2 py-1 sm:px-3 sm:py-1 rounded-lg bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400 font-bold text-xs sm:text-sm">
+                          ${{ item.outOfSubscription }}
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
