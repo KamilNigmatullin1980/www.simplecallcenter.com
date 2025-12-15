@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useHead } from '#imports'
-import image from '../../assets/images/bg/bg-startup.png'
-import image1 from '../../assets/images/features/ai-control/1-cdr-view.png'
-import image2 from '../../assets/images/features/ai-control/2-call-journey.png'
-import image3 from '../../assets/images/features/ai-control/3-AI Review.png'
-import image4 from '../../assets/images/features/ai-control/4-recording-and-transcript.png'
-import image5 from '../../assets/images/features/ai-control/5-ai statusics.png'
+import image from '../../assets/images/bg/bg-startup.webp'
+import image1 from '../../assets/images/features/ai-control/1-cdr-view.webp'
+import image2 from '../../assets/images/features/ai-control/2-call-journey.webp'
+import image3 from '../../assets/images/features/ai-control/3-AI Review.webp'
+import image4 from '../../assets/images/features/ai-control/4-recording-and-transcript.webp'
+import image5 from '../../assets/images/features/ai-control/5-ai statusics.webp'
 
 useHead({
   title: 'Quality Control With AI | SimpleCallCenter',

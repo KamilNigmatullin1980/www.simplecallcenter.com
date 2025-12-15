@@ -6,7 +6,7 @@
         <!-- Contact Info Column -->
         <div class="w-full lg:w-1/3 px-4 mb-8 lg:mb-0 text-sm">
           <img
-            src="../assets/images/large-logo-inverse.png"
+            src="../assets/images/large-logo-inverse.webp"
             alt="Logo"
             class="h-12 w-auto max-w-[280px] mb-4"
           />

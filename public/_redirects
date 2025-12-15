@@ -1,5 +1,5 @@
-# SPA fallback - redirect all routes to index.html
-/*    /index.html   200
+# SPA fallback handled in netlify.toml with force=false
+# This allows Netlify to serve 404.html for actual 404s
 
 
 

@@ -5,7 +5,7 @@
         <!-- Logo -->
         <NuxtLink to="/" class="flex items-center hover:opacity-90 transition-opacity">
           <img
-            src="../assets/images/large-logo-inverse.png"
+            src="../assets/images/large-logo-inverse.webp"
             alt="SimpleCallCenter Logo"
             class="h-10 sm:h-12 w-auto max-w-[200px] sm:max-w-[280px]"
           />

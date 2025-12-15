@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useHead } from '#imports';
-import image from '../../assets/images/bg/bg-index.png';
+import image from '../../assets/images/bg/bg-index.webp';
 
 useHead({
   title: 'Integrated Web Phone | SimpleCallCenter',

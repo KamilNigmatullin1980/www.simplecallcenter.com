@@ -323,6 +323,61 @@
               </li>
             </ol>
           </div>
+
+          <!-- Pricing Comparison Summary -->
+          <div class="mt-12">
+            <section class="sip-burn bg-zinc-50 dark:bg-gray-800 p-6 lg:p-8 rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg">
+              <h2 class="text-xl lg:text-2xl font-bold mb-6 text-gray-900 dark:text-white">
+                Most Platforms Charge More — and Give You Less
+              </h2>
+              <p class="mb-4 text-gray-700 dark:text-gray-300 leading-relaxed">
+                Many voice providers charge more — and deliver less.
+              </p>
+              <p class="mb-4 text-gray-700 dark:text-gray-300 leading-relaxed">
+                For example, a common DIY option like Twilio offers only raw telephony. You'll pay:
+              </p>
+              <ul class="space-y-3 mb-6 text-gray-700 dark:text-gray-300">
+                <li class="flex items-start gap-3">
+                  <span class="text-xl">🔶</span>
+                  <span>Over 3× more for inbound minutes</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-xl">🔶</span>
+                  <span>About 2× more for outbound minutes</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-xl">❌</span>
+                  <span>No built-in dashboards, AI summaries, voicemail handling, or agent tools</span>
+                </li>
+              </ul>
+              <div class="mb-6 p-4 rounded-lg bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800">
+                <p class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                  <span class="text-xl">💡</span>
+                  <span>Why Teams Choose SimpleCallCenter</span>
+                </p>
+                <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                  <li class="flex items-start gap-2">
+                    <span class="text-green-600 dark:text-green-400">✅</span>
+                    <span>Lower per-minute rates</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-green-600 dark:text-green-400">✅</span>
+                    <span>Full platform included (routing, AI, live coaching, recordings, and more)</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-green-600 dark:text-green-400">✅</span>
+                    <span>No seat fees. No setup fees. No hidden charges.</span>
+                  </li>
+                </ul>
+              </div>
+              <p class="mb-2 text-gray-700 dark:text-gray-300 leading-relaxed font-medium">
+                Everything you need — without the buildout, overhead, or surprises.
+              </p>
+              <p class="text-sm text-gray-500 dark:text-gray-400">
+                Comparisons are based on public SIP trunking rates from Twilio as of Dec 2025. Twilio is a registered trademark of Twilio Inc.
+              </p>
+            </section>
+          </div>
         </div>
       </div>
 
@@ -385,7 +440,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import image from '@/assets/images/bg/bg-startup.png'
+import image from '@/assets/images/bg/bg-startup.webp'
 import { useHead } from '#imports'
 
 useHead({

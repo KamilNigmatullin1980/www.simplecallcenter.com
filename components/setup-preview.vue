@@ -129,12 +129,12 @@ const props = defineProps({
 })
 
 const authModal = useAuthModal()
-import image1 from '@/assets/images/setup/1.png'
-import image2 from '@/assets/images/setup/2.png'
-import image3 from '@/assets/images/setup/3.png'
-import image4 from '@/assets/images/setup/4.png'
-import image5 from '@/assets/images/setup/5.png'
-import image6 from '@/assets/images/setup/6.png'
+import image1 from '@/assets/images/setup/1.webp'
+import image2 from '@/assets/images/setup/2.webp'
+import image3 from '@/assets/images/setup/3.webp'
+import image4 from '@/assets/images/setup/4.webp'
+import image5 from '@/assets/images/setup/5.webp'
+import image6 from '@/assets/images/setup/6.webp'
 
 const activeStep = ref(0)
 

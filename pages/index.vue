@@ -258,6 +258,72 @@
         </div>
       </div>
 
+      <!-- Pricing Comparison Summary -->
+      <div class="max-w-4xl mx-auto mb-12">
+        <section class="sip-burn bg-zinc-50 dark:bg-gray-800 p-6 lg:p-8 rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg">
+          <h2 class="text-xl lg:text-2xl font-bold mb-6 text-gray-900 dark:text-white">
+            Most Platforms Charge More — and Give You Less
+          </h2>
+          <p class="mb-4 text-gray-700 dark:text-gray-300 leading-relaxed">
+            Many voice providers charge more — and deliver less.
+          </p>
+          <p class="mb-4 text-gray-700 dark:text-gray-300 leading-relaxed">
+            For example, a common DIY option like Twilio offers only raw telephony. You'll pay:
+          </p>
+          <ul class="space-y-3 mb-6 text-gray-700 dark:text-gray-300">
+            <li class="flex items-start gap-3">
+              <span class="text-xl">🔶</span>
+              <span>Over 3× more for inbound minutes</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-xl">🔶</span>
+              <span>About 2× more for outbound minutes</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-xl">❌</span>
+              <span>No built-in dashboards, AI summaries, voicemail handling, or agent tools</span>
+            </li>
+          </ul>
+          <div class="mb-6 p-4 rounded-lg bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800">
+            <p class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+              <span class="text-xl">💡</span>
+              <span>Why Teams Choose SimpleCallCenter</span>
+            </p>
+            <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+              <li class="flex items-start gap-2">
+                <span class="text-green-600 dark:text-green-400">✅</span>
+                <span>Lower per-minute rates</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-600 dark:text-green-400">✅</span>
+                <span>Full platform included (routing, AI, live coaching, recordings, and more)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-600 dark:text-green-400">✅</span>
+                <span>No seat fees. No setup fees. No hidden charges.</span>
+              </li>
+            </ul>
+          </div>
+              <p class="mb-4 text-gray-700 dark:text-gray-300 leading-relaxed font-medium">
+                Everything you need — without the buildout, overhead, or surprises.
+              </p>
+              <div class="mt-6 text-center">
+                <NuxtLink
+                  to="/pricing"
+                  class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 via-purple-700 to-indigo-800 hover:from-purple-500 hover:via-purple-600 hover:to-indigo-700 text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105 active:scale-100 shadow-lg hover:shadow-purple-500/50"
+                >
+                  <span>View Full Pricing Details</span>
+                  <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </NuxtLink>
+              </div>
+              <p class="text-sm text-gray-500 dark:text-gray-400 mt-4">
+                Comparisons are based on public SIP trunking rates from Twilio as of Dec 2025. Twilio is a registered trademark of Twilio Inc.
+              </p>
+            </section>
+          </div>
+
       <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           <div class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 rounded-xl shadow-lg border border-blue-100 dark:border-gray-600 p-6 lg:p-8">
@@ -499,15 +565,15 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-import image from '@/assets/images/bg/bg-startup.png'
-import dashboardImage from '@/assets/images/front/dashboard.png'
-import inboundFlowImage from '@/assets/images/front/inbound-flow.png'
-import agentEvaluationImage from '@/assets/images/front/agent-login-history.png'
-import cdrViewImage from '@/assets/images/features/ai-control/1-cdr-view.png'
-import callJourneyImage from '@/assets/images/features/ai-control/2-call-journey.png'
-import aiReviewImage from '@/assets/images/features/ai-control/3-AI Review.png'
-import recordingTranscriptImage from '@/assets/images/features/ai-control/4-recording-and-transcript.png'
-import aiStatisticsImage from '@/assets/images/features/ai-control/5-ai statusics.png'
+import image from '@/assets/images/bg/bg-startup.webp'
+import dashboardImage from '@/assets/images/front/dashboard.webp'
+import inboundFlowImage from '@/assets/images/front/inbound-flow.webp'
+import agentEvaluationImage from '@/assets/images/front/agent-login-history.webp'
+import cdrViewImage from '@/assets/images/features/ai-control/1-cdr-view.webp'
+import callJourneyImage from '@/assets/images/features/ai-control/2-call-journey.webp'
+import aiReviewImage from '@/assets/images/features/ai-control/3-AI Review.webp'
+import recordingTranscriptImage from '@/assets/images/features/ai-control/4-recording-and-transcript.webp'
+import aiStatisticsImage from '@/assets/images/features/ai-control/5-ai statusics.webp'
 
 const authModal = useAuthModal()
 

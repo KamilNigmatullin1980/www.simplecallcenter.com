@@ -1,0 +1,12 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+# SPA fallback - redirect to index.html for client-side routing
+# force = false means: only redirect if the file doesn't exist
+# This allows Netlify to serve 404.html for actual 404s
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false

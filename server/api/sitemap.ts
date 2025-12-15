@@ -37,3 +37,4 @@ export default defineSitemapEventHandler(() => {
     lastmod: new Date().toISOString(),
   }))
 })
+

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useHead } from '#imports'
-import image from '../../assets/images/bg/bg-startup.png'
+import image from '../../assets/images/bg/bg-startup.webp'
 
 useHead({
   title: 'Visual Call Flow & Advanced CDR | SimpleCallCenter',

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useHead } from '#imports'
-import image from '@/assets/images/bg/bg-startup.png'
+import image from '@/assets/images/bg/bg-startup.webp'
 
 useHead({
   title: 'Privacy Policy | SimpleCallCenter',

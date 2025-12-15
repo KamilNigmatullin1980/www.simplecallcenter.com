@@ -30,7 +30,7 @@
 
 <script setup>
 import { useHead } from '#imports'
-import image from '~/assets/images/bg/bg-startup.png'
+import image from '~/assets/images/bg/bg-startup.webp'
 
 useHead({
   title: 'FAQ | SimpleCallCenter',
