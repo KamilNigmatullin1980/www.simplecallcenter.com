@@ -6,7 +6,7 @@
   alt="Logo"
   class="
     h-10                 <!-- mobile: 2rem tall -->
-    
+    w-auto               <!-- preserve aspect ratio -->
     sm:h-12             <!-- ≥640px: override to 3rem tall -->
     sm:max-w-[280px]    <!-- ≥640px: override to max-width 280px -->
     block dark:hidden
@@ -19,6 +19,7 @@
   alt="Logo"
   class="
     h-10                 <!-- mobile: 2rem tall -->
+    w-auto               <!-- preserve aspect ratio -->
     sm:h-12             <!-- ≥640px: 3rem tall -->
     sm:max-w-[280px]    <!-- ≥640px: max-width 280px -->
     hidden dark:block
@@ -32,16 +33,16 @@
         tabindex="0"
         class="menu text-lg menu-lg dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
         <li :class="activeIndex === '/' ? 'bg-blue-800 dark:bg-blue-300 dark:text-gray-900 rounded-xl text-white' : 'hover:rounded-xl rounded-xl'">
-            <router-link to="/" class="sub-menu-item">Home</router-link>
+            <NuxtLink to="/" class="sub-menu-item">Home</NuxtLink>
         </li>
         <li :class="isFeaturesActive ? 'bg-blue-800  dark:bg-blue-300 dark:text-gray-900 rounded-xl text-white' : ''">
-            <router-link to="/features" class="sub-menu-item">Features</router-link>
+            <NuxtLink to="/features" class="sub-menu-item">Features</NuxtLink>
         </li>
         <li :class="activeIndex === '/pricing' ? 'bg-blue-800 dark:bg-blue-300 dark:text-gray-900 rounded-xl text-white' : ''">
-            <router-link to="/pricing" class="sub-menu-item">Pricing</router-link>
+            <NuxtLink to="/pricing" class="sub-menu-item">Pricing</NuxtLink>
         </li>
         <li :class="activeIndex === '/faq' ? 'bg-blue-800  dark:bg-blue-300 dark:text-gray-900 rounded-xl text-white' : ''">
-            <router-link to="/faq" class="sub-menu-item">FAQ</router-link>
+            <NuxtLink to="/faq" class="sub-menu-item">FAQ</NuxtLink>
         </li>
       </ul>
     </div>
@@ -51,16 +52,16 @@
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal text-lg px- space-x-4">
         <li :class="activeIndex === '/' ? 'bg-blue-800 dark:bg-blue-300 dark:text-gray-900 rounded-xl text-white' : 'hover:rounded-xl rounded-xl'">
-            <router-link to="/" class="sub-menu-item">Home</router-link>
+            <NuxtLink to="/" class="sub-menu-item">Home</NuxtLink>
           </li>
           <li :class="isFeaturesActive ? 'bg-blue-800  dark:bg-blue-300 dark:text-gray-900 rounded-xl text-white' : ''">
-            <router-link to="/features" class="sub-menu-item">Features</router-link>
+            <NuxtLink to="/features" class="sub-menu-item">Features</NuxtLink>
           </li>
           <li :class="activeIndex === '/pricing' ? 'bg-blue-800 dark:bg-blue-300 dark:text-gray-900 rounded-xl text-white' : ''">
-            <router-link to="/pricing" class="sub-menu-item">Pricing</router-link>
+            <NuxtLink to="/pricing" class="sub-menu-item">Pricing</NuxtLink>
           </li>
           <li :class="activeIndex === '/faq' ? 'bg-blue-800  dark:bg-blue-300 dark:text-gray-900 rounded-xl text-white' : ''">
-            <router-link to="/faq" class="sub-menu-item">FAQ</router-link>
+            <NuxtLink to="/faq" class="sub-menu-item">FAQ</NuxtLink>
           </li>
     </ul>
   </div>

@@ -11,7 +11,11 @@ export default defineNuxtPlugin(() => {
       s1.src = 'https://embed.tawk.to/693afd459d7ac919810328e6/1jc76qm0u'
       s1.charset = 'UTF-8'
       s1.setAttribute('crossorigin', '*')
-      s0.parentNode?.insertBefore(s1, s0)
+      if (s0 && s0.parentNode) {
+        s0.parentNode.insertBefore(s1, s0)
+      } else {
+        document.head.appendChild(s1)
+      }
     })()
   }
 })

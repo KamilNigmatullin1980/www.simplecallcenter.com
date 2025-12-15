@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- <Header/> -->
-        <navbar />
+        <Navbar />
         <!-- <MenuBar/> -->
         <div class="flex flex-col min-h-screen ">
             <main>

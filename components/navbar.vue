@@ -3,18 +3,18 @@
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 lg:h-20">
         <!-- Logo -->
-        <router-link to="/" class="flex items-center hover:opacity-90 transition-opacity">
+        <NuxtLink to="/" class="flex items-center hover:opacity-90 transition-opacity">
           <img
             src="../assets/images/large-logo-inverse.png"
             alt="SimpleCallCenter Logo"
-            class="h-10 sm:h-12 max-w-[200px] sm:max-w-[280px]"
+            class="h-10 sm:h-12 w-auto max-w-[200px] sm:max-w-[280px]"
           />
-        </router-link>
+        </NuxtLink>
   
         <!-- Desktop Navigation Links -->
         <ul class="hidden lg:flex items-center space-x-1">
           <li>
-            <router-link
+            <NuxtLink
               to="/"
               class="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
               :class="activeIndex === '/' 
@@ -22,10 +22,10 @@
                 : 'text-white/90 hover:bg-white/10 hover:text-white'"
             >
               Home
-            </router-link>
+            </NuxtLink>
           </li>
           <li>
-            <router-link
+            <NuxtLink
               to="/features"
               class="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
               :class="isFeaturesActive 
@@ -33,10 +33,10 @@
                 : 'text-white/90 hover:bg-white/10 hover:text-white'"
             >
               Features
-            </router-link>
+            </NuxtLink>
           </li>
           <li>
-            <router-link
+            <NuxtLink
               to="/pricing"
               class="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
               :class="activeIndex === '/pricing' 
@@ -44,10 +44,10 @@
                 : 'text-white/90 hover:bg-white/10 hover:text-white'"
             >
               Pricing
-            </router-link>
+            </NuxtLink>
           </li>
           <li>
-            <router-link
+            <NuxtLink
               to="/faq"
               class="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
               :class="activeIndex === '/faq' 
@@ -55,7 +55,7 @@
                 : 'text-white/90 hover:bg-white/10 hover:text-white'"
             >
               FAQ
-            </router-link>
+            </NuxtLink>
           </li>
         </ul>
   
@@ -111,7 +111,7 @@
         <div v-if="toggle" class="lg:hidden border-t border-white/20 py-4">
           <ul class="space-y-1">
             <li>
-              <router-link
+              <NuxtLink
                 to="/"
                 @click="handler"
                 class="block px-4 py-3 rounded-lg text-base font-medium transition-colors"
@@ -120,10 +120,10 @@
                   : 'text-white/90 hover:bg-white/10 hover:text-white'"
               >
                 Home
-              </router-link>
+              </NuxtLink>
             </li>
             <li>
-              <router-link
+              <NuxtLink
                 to="/features"
                 @click="handler"
                 class="block px-4 py-3 rounded-lg text-base font-medium transition-colors"
@@ -132,10 +132,10 @@
                   : 'text-white/90 hover:bg-white/10 hover:text-white'"
               >
                 Features
-              </router-link>
+              </NuxtLink>
             </li>
             <li>
-              <router-link
+              <NuxtLink
                 to="/pricing"
                 @click="handler"
                 class="block px-4 py-3 rounded-lg text-base font-medium transition-colors"
@@ -144,10 +144,10 @@
                   : 'text-white/90 hover:bg-white/10 hover:text-white'"
               >
                 Pricing
-              </router-link>
+              </NuxtLink>
             </li>
             <li>
-              <router-link
+              <NuxtLink
                 to="/faq"
                 @click="handler"
                 class="block px-4 py-3 rounded-lg text-base font-medium transition-colors"
@@ -156,7 +156,7 @@
                   : 'text-white/90 hover:bg-white/10 hover:text-white'"
               >
                 FAQ
-              </router-link>
+              </NuxtLink>
             </li>
           </ul>
           <div class="px-4 pt-4 pb-2">

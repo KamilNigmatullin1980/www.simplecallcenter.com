@@ -8,7 +8,7 @@
           <img
             src="../assets/images/large-logo-inverse.png"
             alt="Logo"
-            class="h-12 max-w-[280px] mb-4"
+            class="h-12 w-auto max-w-[280px] mb-4"
           />
           <ul class="space-y-2">
             <li class="flex items-center">
