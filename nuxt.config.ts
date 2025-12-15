@@ -7,10 +7,7 @@ export default defineNuxtConfig({
   ssr: true, // Disable SSR for static site generation
   css: ["~/assets/app.css"],
   modules: [
-    ['nuxt-simple-sitemap', {
-      hostname: 'https://www.simplecallcenter.com',
-      exclude: ['/admin/**'],
-    }], // This module handles loading gtag.js and initialization
+    '@nuxtjs/sitemap',
     'nuxt-gtag'
   ],
   'gtag': {
@@ -18,6 +15,12 @@ export default defineNuxtConfig({
   },
   site: {
     url: 'https://www.simplecallcenter.com',
+  },
+  sitemap: {
+    exclude: ['/admin/**', '/test/**'],
+    sources: [
+      '/api/sitemap'
+    ]
   },
   app: {
     head: {
@@ -51,11 +54,12 @@ export default defineNuxtConfig({
       ]
     }
   },
+  compatibilityDate: '2025-12-15',
   nitro: {
     preset: 'static', // Use static preset for DigitalOcean
     compressPublicAssets: true,
     prerender: {
-      routes: ['/']
+      crawlLinks: true
     }
   },
   sourcemap: {
