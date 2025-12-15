@@ -12,9 +12,10 @@
         <h1 class="text-4xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
           Our <span class="text-purple-800 dark:text-purple-300">Features</span>
         </h1>
-        <!-- <p class="text-lg sm:text-xl lg:text-2xl text-gray-700 dark:text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
-          Phone System Features
-        </p> -->
+        <p class="text-xl sm:text-2xl lg:text-3xl text-gray-700 dark:text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <strong>All features are included in every plan</strong> <br></br>
+          <strong><span class="text-purple-800 dark:text-purple-300">no extra fees, no tiered pricing. Just usage.</span></strong>
+        </p>
       </div>
 
       <div class="max-w-7xl mx-auto">
@@ -78,8 +79,8 @@
   useHead({
     title: 'Features | SimpleCallCenter',
     meta: [
-      { name: 'description', content: 'Discover the robust features of SimpleCallCenter including AI-based automated setup, multilingual IVR, desktop SIP phone support, and advanced call center tools designed for business efficiency.' },
-      { name: 'keywords', content: 'call center features, AI-based setup, multilingual IVR, web phone, call center tools, SimpleCallCenter' },
+      { name: 'description', content: 'Explore all features included in SimpleCallCenter — from AI call evaluation and visual call flows to inbound/outbound routing, dashboards, voicemail automation, and more.' },
+      { name: 'keywords', content: 'call center features, AI phone system, inbound routing, outbound calls, voicemail management, team call routing, real-time dashboard, no seat fee call center' },
       { property: 'og:title', content: 'Explore Our Awesome Features | SimpleCallCenter' },
       { property: 'og:description', content: 'Discover the robust features of SimpleCallCenter including AI-based automated setup, multilingual IVR, integrated web phone, and advanced call center tools designed for business efficiency.' },
       { property: 'og:type', content: 'website' },

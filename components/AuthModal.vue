@@ -41,13 +41,13 @@
               <!-- Title -->
               <div>
                 <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                  Sign in or create an account
+                  Start Free<br>Set Up Your Real Call Platform
                 </h2>
                 <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">
-                  New here? We'll create your account automatically.
+                  Test inbound calls, AI, and routing — keep it all when you’re ready..
                 </p>
                 <p class="text-sm font-semibold text-green-600 dark:text-green-400">
-                  ✓ Creating an account and testing is completely free.
+                  ✓ Live test with $1 credit — no card needed.
                 </p>
               </div>
 
@@ -116,7 +116,7 @@
                 :disabled="loading || !email || !isValidEmail"
                 class="w-full px-4 py-3 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 hover:from-blue-700 hover:via-purple-700 hover:to-indigo-800 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg"
               >
-                <span v-if="!loading">Email me a sign-in link</span>
+                <span v-if="!loading">Send me my setup link</span>
                 <span v-else class="flex items-center justify-center gap-2">
                   <svg class="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>

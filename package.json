@@ -15,7 +15,7 @@
     "@tailwindcss/vite": "^4.1.7",
     "@vueuse/head": "^2.0.0",
     "daisyui": "^5.0.37",
-    "nuxt": "^3.17.4",
+    "nuxt": "^4.2.2",
     "nuxt-gtag": "^3.0.2",
     "nuxt-simple-sitemap": "^4.4.1",
     "tailwindcss": "^4.1.7",

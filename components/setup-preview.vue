@@ -9,7 +9,7 @@
           </h2>
           
           <p class="text-lg text-gray-700 dark:text-gray-300">
-            Set up your call center in 6 quick steps: define languages, queues, and hours.
+            Get a fully working inbound system in 6 steps — with IVR, agent routing, and your own test number.
           </p>
 
           <ul class="space-y-4 text-gray-700 dark:text-gray-300">
@@ -17,25 +17,25 @@
               <svg class="w-5 h-5 flex-shrink-0 mr-3 mt-0.5 text-blue-800 dark:text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <span>Instant IVR generation (TTS in 188 languages)</span>
+              <span>Unlimited users — no per-seat pricing</span>
             </li>
             <li class="flex items-start">
               <svg class="w-5 h-5 flex-shrink-0 mr-3 mt-0.5 text-blue-800 dark:text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <span>Shared test number + unique PIN — hear your setup live</span>
+              <span>Pay only for what you use — calls, AI, and features</span>
             </li>
             <li class="flex items-start">
               <svg class="w-5 h-5 flex-shrink-0 mr-3 mt-0.5 text-blue-800 dark:text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <span>$1 usage credit to test AI summaries and transcription</span>
+              <span>Full platform: inbound routing, internal extensions, fax, AI summaries</span>
             </li>
             <li class="flex items-start">
               <svg class="w-5 h-5 flex-shrink-0 mr-3 mt-0.5 text-blue-800 dark:text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <span>Real system — not a demo sandbox</span>
+              <span>Live test setup in minutes — no card required</span>
             </li>
             <li class="flex items-start">
               <svg class="w-5 h-5 flex-shrink-0 mr-3 mt-0.5 text-blue-800 dark:text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">

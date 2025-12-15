@@ -13,17 +13,16 @@
         A Real <span class="text-blue-800 dark:text-blue-300">Call Center</span> Platform
       </h1> -->
         <h1 class="text-4xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
-          A Modern <span class="text-purple-800 dark:text-purple-300">Phone System</span> for Real Teams.<br />
-          <span class="text-purple-800 dark:text-purple-300">Call Center</span> Ready, Business Flexible.
+          A Real Business Phone Platform<br>
+          <span class="text-purple-800 dark:text-purple-300"> No Per-Seat Fees. <br>Test Live with Free Credit.</span>
         </h1>
         
-        <p class="text-lg sm:text-xl lg:text-2xl text-gray-700 dark:text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
-          Route calls with IVR menus, internal calling, live dashboards, and instant updates as calls happen.
-Add AI summaries, voicemail, and missed-call follow-ups when you need them.
+        <h2 class="text-lg sm:text-xl lg:text-2xl text-gray-700 dark:text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+          Unlimited agents, full features, and usage-based pricing. Test your call flow live with a free $1 credit — no card required.
           <span class="block mt-2 font-semibold text-gray-900 dark:text-white">
             Everything included, nothing gated — no per-seat pricing.
           </span>
-        </p>
+        </h2>
 
         <div class="flex flex-col items-center justify-center gap-4 mt-10">
           <button
@@ -38,7 +37,7 @@ Add AI summaries, voicemail, and missed-call follow-ups when you need them.
             
             <!-- Content -->
             <span class="relative z-10 flex items-center gap-3">
-              <span class="font-extrabold tracking-tight">Start Free Test</span>
+              <span class="font-extrabold tracking-tight">Try It Live — Free $1 Credit</span>
               <svg class="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
@@ -48,7 +47,7 @@ Add AI summaries, voicemail, and missed-call follow-ups when you need them.
             <div class="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-shine transition-opacity duration-500"></div>
           </button>
           <p class="text-sm lg:text-base text-gray-600 dark:text-gray-300 text-center max-w-md font-medium">
-            Includes $1 in testing credit for real inbound calls and AI features
+            Includes $1 in testing credit for real inbound calls and AI features. AI features pause when free credit runs out.
           </p>
         </div>
       </div>
@@ -124,7 +123,7 @@ Add AI summaries, voicemail, and missed-call follow-ups when you need them.
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
         <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-          Is this made for a business like mine?
+          Built for Teams of Any Size
         </h2>
         <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"> 
           Perfect for teams who need to handle real inbound calls — without wasting time on setup or fighting clunky tools.
@@ -620,7 +619,7 @@ useHead({
     {
       name: 'description',
       content:
-        'SimpleCallCenter is an AI-powered call center and business phone platform. Multilingual IVR, queues, internal calls, shared voicemail, fax, and call quality review — all without per-seat pricing.',
+        'Real business phone platform for teams. No seat fees. No fake tiers. Just pay for usage — calls, faxes, AI tools. Includes internal calling and extensions. Try live, free.',
     },
     {
       name: 'keywords',
