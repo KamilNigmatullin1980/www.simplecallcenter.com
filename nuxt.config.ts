@@ -71,6 +71,7 @@ export default defineNuxtConfig({
     compressPublicAssets: true,
     prerender: {
       crawlLinks: true,
+      routes: ['/', '/features', '/pricing', '/faq', '/how-it-works'], // add your key routes
       ignore: ['/404'],
       failOnError: false
     }
