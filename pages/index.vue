@@ -683,12 +683,12 @@ onUnmounted(() => {
 })
 
 useHead({
-  title: 'SimpleCallCenter – AI-Powered Call Center & Phone Platform',
+  title: 'SimpleCallCenter| AI-Powered Phone Platform',
   meta: [
     {
       name: 'description',
       content:
-        'Real business phone platform for teams. No seat fees. No fake tiers. Pay for usage only. Calls, faxes, AI tools. Free internal calling. Try live, free.',
+        'Real business phone platform for teams. No seat fees. No fake tiers. Pay for usage only. Calls, Quesue, Faxes, AI tools. Try live, free.',
     },
     {
       name: 'keywords',
