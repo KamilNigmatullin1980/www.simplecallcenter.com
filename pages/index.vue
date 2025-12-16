@@ -13,9 +13,12 @@
         A Real <span class="text-blue-800 dark:text-blue-300">Call Center</span> Platform
       </h1> -->
         <h1 class="text-4xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
-          AI-Powered Business Phone System for Call Centers<br>
-          <span class="text-purple-800 dark:text-purple-300"> No Per-Seat Fees. <br>Test Live with Free Credit.</span>
+          AI-Powered Business Phone System<br> for Call Centers<br>
+          
         </h1>
+        <h2 class="text-3xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+          <span class="text-purple-800 dark:text-purple-300"> No Per-Seat Fees. Test Live with Free Credit.</span>
+        </h2>
         
         <h2 class="text-lg sm:text-xl lg:text-2xl text-gray-700 dark:text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
           Unlimited agents, full features, and usage-based pricing. Test your call flow live with a free $1 credit — no card required.
