@@ -683,7 +683,7 @@ onUnmounted(() => {
 })
 
 useHead({
-  title: 'SimpleCallCenter| AI-Powered Phone Platform',
+  title: 'SimpleCallCenter – AI-Powered Call Center & Phone Platform',
   meta: [
     {
       name: 'description',
