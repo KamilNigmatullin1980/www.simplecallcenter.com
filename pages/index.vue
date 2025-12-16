@@ -685,7 +685,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Real business phone platform for teams. No seat fees. No fake tiers. Just pay for usage — calls, faxes, AI tools. Includes internal calling and extensions. Try live, free.',
+        'Real business phone platform for teams. No seat fees. No fake tiers. Pay for usage only. Calls, faxes, AI tools. Free internal calling. Try live, free.',
     },
     {
       name: 'keywords',
