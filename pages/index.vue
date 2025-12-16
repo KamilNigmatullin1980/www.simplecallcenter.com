@@ -13,7 +13,7 @@
         A Real <span class="text-blue-800 dark:text-blue-300">Call Center</span> Platform
       </h1> -->
         <h1 class="text-4xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
-          A Real Business Phone Platform<br>
+          AI-Powered Business Phone System for Call Centers<br>
           <span class="text-purple-800 dark:text-purple-300"> No Per-Seat Fees. <br>Test Live with Free Credit.</span>
         </h1>
         

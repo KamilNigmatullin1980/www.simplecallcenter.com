@@ -57,6 +57,17 @@
               FAQ
             </NuxtLink>
           </li>
+          <li>
+            <NuxtLink
+              to="/how-it-works"
+              class="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+              :class="activeIndex === '/how-it-works' 
+                ? 'bg-white/20 text-white shadow-lg backdrop-blur-sm' 
+                : 'text-white/90 hover:bg-white/10 hover:text-white'"
+            >
+              How It Works
+            </NuxtLink>
+          </li>
         </ul>
   
         <!-- Right Side: Sign In Button & Mobile Menu Toggle -->
@@ -156,6 +167,18 @@
                   : 'text-white/90 hover:bg-white/10 hover:text-white'"
               >
                 FAQ
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink
+                to="/how-it-works"
+                @click="handler"
+                class="block px-4 py-3 rounded-lg text-base font-medium transition-colors"
+                :class="activeIndex === '/how-it-works' 
+                  ? 'bg-white/20 text-white backdrop-blur-sm' 
+                  : 'text-white/90 hover:bg-white/10 hover:text-white'"
+              >
+                How It Works
               </NuxtLink>
             </li>
           </ul>

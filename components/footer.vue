@@ -68,6 +68,12 @@
                     FAQ
                   </a>
                 </li>
+                <li>
+                  <a href="/how-it-works" class="flex items-center hover:underline">
+                    <i data-feather="chevron-right" class="inline-block w-4 h-4 mr-1"></i>
+                    How It Works
+                  </a>
+                </li>
               </ul>
             </div>
 

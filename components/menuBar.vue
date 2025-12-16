@@ -44,6 +44,9 @@
         <li :class="activeIndex === '/faq' ? 'bg-blue-800  dark:bg-blue-300 dark:text-gray-900 rounded-xl text-white' : ''">
             <NuxtLink to="/faq" class="sub-menu-item">FAQ</NuxtLink>
         </li>
+        <li :class="activeIndex === '/how-it-works' ? 'bg-blue-800  dark:bg-blue-300 dark:text-gray-900 rounded-xl text-white' : ''">
+            <NuxtLink to="/how-it-works" class="sub-menu-item">How It Works</NuxtLink>
+        </li>
       </ul>
     </div>
     
@@ -62,6 +65,9 @@
           </li>
           <li :class="activeIndex === '/faq' ? 'bg-blue-800  dark:bg-blue-300 dark:text-gray-900 rounded-xl text-white' : ''">
             <NuxtLink to="/faq" class="sub-menu-item">FAQ</NuxtLink>
+          </li>
+          <li :class="activeIndex === '/how-it-works' ? 'bg-blue-800  dark:bg-blue-300 dark:text-gray-900 rounded-xl text-white' : ''">
+            <NuxtLink to="/how-it-works" class="sub-menu-item">How It Works</NuxtLink>
           </li>
     </ul>
   </div>
