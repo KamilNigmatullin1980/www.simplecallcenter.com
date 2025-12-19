@@ -110,19 +110,49 @@
                 </div>
               </div>
 
+              <!-- Gmail SSO Notification -->
+              <div
+                v-if="isGmail && isValidEmail && !useMagicLink"
+                class="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg"
+              >
+                <p class="text-sm text-blue-800 dark:text-blue-300 mb-2">
+                  We'll sign you in with Google SSO/OAuth
+                </p>
+                <button
+                  @click="useMagicLink = true"
+                  class="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 hover:underline font-medium"
+                >
+                  Prefer a magic link instead? Click here
+                </button>
+              </div>
+
+              <!-- Magic Link Confirmation (when user opts for magic link) -->
+              <div
+                v-if="isGmail && isValidEmail && useMagicLink"
+                class="p-4 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg"
+              >
+                <p class="text-sm text-purple-800 dark:text-purple-300">
+                  Magic link will be sent to your email
+                </p>
+              </div>
+
               <!-- Email Button -->
               <button
                 @click="handleEmailAuth"
                 :disabled="loading || !email || !isValidEmail"
                 class="w-full px-4 py-3 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 hover:from-blue-700 hover:via-purple-700 hover:to-indigo-800 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg"
               >
-                <span v-if="!loading">Send me my setup link</span>
+                <span v-if="!loading">
+                  <span v-if="isGmail && !useMagicLink">Authenticate with Google</span>
+                  <span v-else>Send me my setup link</span>
+                </span>
                 <span v-else class="flex items-center justify-center gap-2">
                   <svg class="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                     <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                   </svg>
-                  Sending...
+                  <span v-if="isGmail && !useMagicLink">Redirecting...</span>
+                  <span v-else>Sending...</span>
                 </span>
               </button>
 
@@ -175,7 +205,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 
 const props = defineProps<{
   isOpen: boolean
@@ -189,10 +219,22 @@ const email = ref('')
 const loading = ref(false)
 const emailSent = ref(false)
 const error = ref('')
+const useMagicLink = ref(false)
 
 const isValidEmail = computed(() => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   return emailRegex.test(email.value)
+})
+
+const isGmail = computed(() => {
+  if (!email.value) return false
+  const domain = email.value.toLowerCase().split('@')[1]
+  return domain === 'gmail.com'
+})
+
+// Reset useMagicLink when email changes
+watch(email, () => {
+  useMagicLink.value = false
 })
 
 const close = () => {
@@ -200,6 +242,7 @@ const close = () => {
   loading.value = false
   emailSent.value = false
   error.value = ''
+  useMagicLink.value = false
   emit('close')
 }
 
@@ -228,6 +271,12 @@ const handleGoogleAuth = async () => {
 const handleEmailAuth = async () => {
   if (!email.value || !isValidEmail.value) {
     error.value = 'Please enter a valid email address.'
+    return
+  }
+
+  // If Gmail and user hasn't opted for magic link, use Google OAuth
+  if (isGmail.value && !useMagicLink.value) {
+    await handleGoogleAuth()
     return
   }
 
