@@ -62,6 +62,21 @@ export default defineNuxtConfig({
           rel: 'dns-prefetch',
           href: 'https://www.googletagmanager.com'
         }
+      ],
+      script: [
+        // Google tag (gtag.js) for Google Ads conversion tracking
+        {
+          src: 'https://www.googletagmanager.com/gtag/js?id=AW-650588227',
+          async: true
+        },
+        {
+          innerHTML: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-650588227');
+          `
+        }
       ]
     }
   },

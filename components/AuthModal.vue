@@ -53,7 +53,7 @@
 
               <!-- Google Button -->
               <button
-                @click="handleGoogleAuth"
+                @click="() => handleGoogleAuth()"
                 :disabled="loading"
                 class="w-full flex items-center justify-center gap-3 px-4 py-3 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-white font-semibold rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-sm"
               >
@@ -246,7 +246,7 @@ const close = () => {
   emit('close')
 }
 
-const handleGoogleAuth = async () => {
+const handleGoogleAuth = async (emailHint?: string) => {
   try {
     loading.value = true
     error.value = ''
@@ -256,8 +256,18 @@ const handleGoogleAuth = async () => {
     )
     
     if (response.success && response.data) {
+      let oauthUrl = response.data
+      // Append login_hint if emailHint is a Gmail address
+      if (emailHint) {
+        const domain = emailHint.toLowerCase().split('@')[1]
+        if (domain === 'gmail.com') {
+          const encodedEmail = encodeURIComponent(emailHint)
+          const separator = oauthUrl.includes('?') ? '&' : '?'
+          oauthUrl += `${separator}login_hint=${encodedEmail}`
+        }
+      }
       // Redirect to Google OAuth
-      window.location.href = response.data
+      window.location.href = oauthUrl
     } else {
       error.value = 'Failed to initiate Google authentication. Please try again.'
     }
@@ -276,7 +286,7 @@ const handleEmailAuth = async () => {
 
   // If Gmail and user hasn't opted for magic link, use Google OAuth
   if (isGmail.value && !useMagicLink.value) {
-    await handleGoogleAuth()
+    await handleGoogleAuth(email.value)
     return
   }
 
