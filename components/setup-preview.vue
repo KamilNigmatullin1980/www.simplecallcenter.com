@@ -5,7 +5,7 @@
         <!-- Left side: Text content -->
         <div v-if="!sliderOnly" class="lg:col-span-2 space-y-6">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
-            Try It Instantly — No Credit Card Required
+            Set up your own test call center <span class="text-purple-800 dark:text-purple-300">in minutes</span> — no card, no delays, no nonsense.
           </h2>
           
           <p class="text-lg text-gray-700 dark:text-gray-300">

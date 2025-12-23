@@ -13,18 +13,17 @@
         A Real <span class="text-blue-800 dark:text-blue-300">Call Center</span> Platform
       </h1> -->
         <h1 class="text-4xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
-          AI-Powered Business Phone System<br> for Call Centers<br>
-          
+          Your team talks to customers.<br>
+          <span class="text-purple-800 dark:text-purple-300"> Our AI handles the rest.</span><br>
+          <!-- <span class="text-purple-800 dark:text-purple-300"> No Per-Seat Fees. <br>Test Live with Free Credit.</span> -->
         </h1>
-        <h2 class="text-3xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
-          <span class="text-purple-800 dark:text-purple-300"> No Per-Seat Fees. Test Live with Free Credit.</span>
-        </h2>
         
         <h2 class="text-lg sm:text-xl lg:text-2xl text-gray-700 dark:text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
-          Unlimited agents, full features, and usage-based pricing. Test your call flow live with a free $1 credit — no card required.
-          <span class="block mt-2 font-semibold text-gray-900 dark:text-white">
-            Everything included, nothing gated — no per-seat pricing.
-          </span>
+          SimpleCallCenter is a <span class="mt-2 font-semibold text-purple-800 dark:text-white">phone platform for support teams</span> — with unlimited agents, usage-based pricing, and AI that works behind the scenes to flag call issues, summarize conversations, and help your team improve.
+          <!-- Unlimited agents, full features, and usage-based pricing. Test your call flow live with a free $1 credit — no card required. -->
+          <!-- <span class="block mt-2 font-semibold text-gray-900 dark:text-white"> -->
+            <!-- Everything included, nothing gated — no per-seat pricing. -->
+          <!-- </span> -->
         </h2>
 
         <div class="flex flex-col items-center justify-center gap-4 mt-10">
@@ -49,75 +48,133 @@
             <!-- Shine effect on hover -->
             <div class="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-shine transition-opacity duration-500"></div>
           </button>
-          <p class="text-sm lg:text-base text-gray-600 dark:text-gray-300 text-center max-w-md font-medium">
-            Includes $1 in testing credit for real inbound calls and AI features. AI features pause when free credit runs out.
+          <div class="flex flex-col sm:flex-row gap-6 mt-6 max-w-5xl mx-auto">
+            <!-- Box 1 — AI Credit -->
+            <div class="flex-1 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-8 border border-gray-200 dark:border-gray-700 shadow-lg">
+              <div class="text-5xl mb-4">🎁</div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">$1 in Free AI Credit</h3>
+              <p class="text-base text-gray-600 dark:text-gray-300">
+                Covers call summaries, quality checks, and performance insights.
+              </p>
+            </div>
+
+            <!-- Box 2 — Inbound Calls Still Work -->
+            <div class="flex-1 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-8 border border-gray-200 dark:border-gray-700 shadow-lg">
+              <div class="text-5xl mb-4">📞</div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Calls Keep Flowing</h3>
+              <p class="text-base text-gray-600 dark:text-gray-300">
+                Your shared test number + PIN still works after credit runs out.
+              </p>
+            </div>
+
+            <!-- Box 3 — CRM Still Syncs -->
+            <div class="flex-1 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-8 border border-gray-200 dark:border-gray-700 shadow-lg">
+              <div class="flex items-center justify-center gap-4 mb-4 h-12 flex-wrap">
+                <!-- Zoho -->
+                <span class="text-xl font-bold tracking-tight" style="color: #C8202F;">Zoho</span>
+                <!-- HubSpot -->
+                <span class="text-xl font-bold tracking-tight" style="color: #FF7A59;">HubSpot</span>
+                <!-- Zendesk -->
+                <span class="text-xl font-bold tracking-tight" style="color: #03363D;">Zendesk</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">CRM Integration Works</h3>
+              <p class="text-base text-gray-600 dark:text-gray-300">
+                CRM Sync Stays On
+              </p>
+            </div>
+          </div>
+          <p class="text-center text-sm lg:text-base text-gray-700 dark:text-gray-200 mt-6 font-medium">
+            Test the real platform. No card. No tricks. Just $1 of free AI and full access.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <setup-preview />
-
-  <!-- Proof Block: Screenshot Thumbnails -->
-  <section class="w-full bg-white dark:bg-gray-900 py-12 lg:py-16 border-b border-gray-200 dark:border-gray-800">
+  <!-- Tired of overpriced call software section -->
+  <section class="w-full bg-white dark:bg-gray-900 py-16 lg:py-24">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-7xl mx-auto relative">
-        <!-- Left Arrow -->
-        <button
-          @click="scrollProofLeft"
-          class="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-900 dark:text-white transition-all duration-200 flex items-center justify-center hover:scale-110 focus:outline-none focus:ring-2 focus:ring-purple-500"
-          aria-label="Scroll left"
-        >
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
+      <div class="max-w-5xl mx-auto">
+        <!-- Section Title -->
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white text-center mb-12">
+          Tired of overpriced call software and fake AI agents?
+        </h2>
 
-        <!-- Right Arrow -->
-        <button
-          @click="scrollProofRight"
-          class="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-900 dark:text-white transition-all duration-200 flex items-center justify-center hover:scale-110 focus:outline-none focus:ring-2 focus:ring-purple-500"
-          aria-label="Scroll right"
-        >
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
+        <!-- Three Boxes -->
+        <div class="flex flex-col sm:flex-row gap-6">
+          <!-- Box 1 — Problem -->
+          <div class="flex-1 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-8 border border-gray-200 dark:border-gray-700 shadow-lg">
+            <div class="text-5xl mb-4">🔥</div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              Most platforms punish you for growing.
+            </h3>
+            <p class="text-base text-gray-600 dark:text-gray-300">
+              They charge per agent, lock you into contracts, and pitch "AI agents" that butcher your customer experience.
+            </p>
+          </div>
 
-        <!-- Scrollable Container -->
-        <div
-          ref="proofScrollContainer"
-          class="flex gap-6 lg:gap-8 overflow-x-auto scrollbar-hide scroll-smooth px-12"
-          style="scrollbar-width: none; -ms-overflow-style: none;"
-        >
-          <div
-            v-for="(img, index) in proofImages"
-            :key="index"
-            @click="openModal(img)"
-            class="group relative bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-2xl hover:border-purple-300 dark:hover:border-purple-600 transition-all duration-300 cursor-pointer flex-shrink-0 w-80"
-          >
-            <div class="aspect-video bg-gray-100 dark:bg-gray-700 flex items-center justify-center overflow-hidden">
-              <img
-                :src="img.src"
-                :alt="img.alt"
-                loading="lazy"
-                class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-            <div class="p-4">
-              <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">
-                {{ img.title }}
-              </h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400">
-                {{ img.description }}
-              </p>
-            </div>
+          <!-- Box 2 — Solution -->
+          <div class="flex-1 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-8 border border-gray-200 dark:border-gray-700 shadow-lg">
+            <div class="text-5xl mb-4">✅</div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              We built SimpleCallCenter for real support teams — not for replacing them.
+            </h3>
+            <p class="text-base text-gray-600 dark:text-gray-300 mb-3">
+              <strong class="font-semibold">Your agents stay human.</strong>
+            </p>
+            <p class="text-base text-gray-600 dark:text-gray-300 mb-2">
+              Our AI works quietly in the background to:
+            </p>
+            <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300 ml-4">
+              <li class="flex items-start">
+                <span class="text-purple-600 dark:text-purple-400 mr-2 font-bold">•</span>
+                <span>Summarize every call</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-purple-600 dark:text-purple-400 mr-2 font-bold">•</span>
+                <span>Flag quality issues</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-purple-600 dark:text-purple-400 mr-2 font-bold">•</span>
+                <span>Provide insights without extra tools or manual review</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Box 3 — Best Part -->
+          <div class="flex-1 bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-purple-900/30 dark:to-indigo-900/30 backdrop-blur-sm rounded-xl p-8 border-2 border-purple-200 dark:border-purple-800 shadow-lg">
+            <div class="text-5xl mb-4">💵</div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              And the best part?
+            </h3>
+            <p class="text-lg font-bold text-purple-800 dark:text-purple-300 mb-3">
+              No per-agent pricing. Ever.
+            </p>
+            <p class="text-base text-gray-600 dark:text-gray-300 mb-3">
+              You only pay for what you use — calls, AI, integrations — at some of the lowest rates you'll find anywhere.
+            </p>
+            <p class="text-base font-semibold text-gray-900 dark:text-white mb-2">
+              Voice calls are just $0.0025 per minute.
+            </p>
+            <p class="text-sm text-gray-600 dark:text-gray-400 italic mb-3">
+              (Seriously. That's not a typo.)
+            </p>
+            <p class="text-base text-gray-600 dark:text-gray-300 mb-3">
+              Want AI call summaries, scoring, or transcription? Enable them when you need them — billed separately, only if used.
+            </p>
+            <p class="text-base text-gray-600 dark:text-gray-300 font-semibold mb-2">
+              No contracts. No surprise fees. No fine print.
+            </p>
+            <p class="text-base text-gray-600 dark:text-gray-300">
+              Just honest pricing that doesn't make you feel tricked.
+            </p>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <setup-preview />
  
   <section
     class="w-full bg-cover bg-center py-16 lg:py-20"
@@ -126,7 +183,7 @@
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
         <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-          Built for Teams of Any Size
+          Flexible for Teams of Any Size
         </h2>
         <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"> 
           Perfect for teams who need to handle real inbound calls — without wasting time on setup or fighting clunky tools.
@@ -137,65 +194,71 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           <div class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 rounded-xl shadow-lg border border-blue-100 dark:border-gray-600 p-6 lg:p-8">
             <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-5 flex items-center gap-3">
-              <span class="text-3xl">🧑‍💼</span>
+              <span class="text-2xl">🔹</span>
               <span>Solo Sellers & Small Teams</span>
             </h3>
+            <p class="text-base text-gray-700 dark:text-gray-300 mb-4 font-medium">
+              Everything you need to sound professional — without sounding like a bot.
+            </p>
             <ul class="space-y-3 text-gray-700 dark:text-gray-300">
               <li class="flex items-start gap-3">
                 <svg class="w-6 h-6 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
-                <span>Handle support or sales calls professionally</span>
+                <span>Route by language, topic, or schedule</span>
               </li>
               <li class="flex items-start gap-3">
                 <svg class="w-6 h-6 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
-                <span>Route by language, topic, or working hours</span>
+                <span>Use your laptop or any SIP phone — no extra hardware</span>
               </li>
               <li class="flex items-start gap-3">
                 <svg class="w-6 h-6 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
-                <span>Use your laptop or SIP phone — no hardware required</span>
+                <span>Get AI summaries and transcripts without hiring extra staff</span>
               </li>
               <li class="flex items-start gap-3">
                 <svg class="w-6 h-6 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
-                <span>Test for free, live, before you commit</span>
+                <span>Set up in minutes, test for free</span>
               </li>
             </ul>
           </div>
           <div class="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-gray-800 dark:to-gray-700 rounded-xl shadow-lg border border-purple-100 dark:border-gray-600 p-6 lg:p-8">
             <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-5 flex items-center gap-3">
-              <span class="text-3xl">🏢</span>
+              <span class="text-2xl">🔸</span>
               <span>Growing or Multi-Brand Teams</span>
             </h3>
+            <p class="text-base text-gray-700 dark:text-gray-300 mb-4 font-medium">
+              Scale support without growing your budget.
+            </p>
             <ul class="space-y-3 text-gray-700 dark:text-gray-300">
               <li class="flex items-start gap-3">
                 <svg class="w-6 h-6 text-purple-600 dark:text-purple-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
-                <span>Unlimited agents and queues — no per-seat pricing</span>
+                <span>Unlimited agents + queues — no per-seat pricing</span>
               </li>
               <li class="flex items-start gap-3">
                 <svg class="w-6 h-6 text-purple-600 dark:text-purple-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
-                <span>Run multiple call centers under one account</span>
+                <span>Run multiple call centers under one login</span>
               </li>
               <li class="flex items-start gap-3">
                 <svg class="w-6 h-6 text-purple-600 dark:text-purple-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
-                <span>Assign voicemails, monitor calls, evaluate agents with AI</span>
+                <span>Evaluate calls with AI, assign voicemails, monitor live</span>
               </li>
               <li class="flex items-start gap-3">
                 <svg class="w-6 h-6 text-purple-600 dark:text-purple-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
-                <span>Collaborate across teams with internal extensions and attended transfers</span>
+                <span>Collaborate across teams with extensions and warm transfers</span>
               </li>
             </ul>
           </div>
@@ -222,117 +285,66 @@
         <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 p-8 lg:p-10">
           <div class="mb-8">
             <p class="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-              You pick a monthly plan — it comes with included usage credit (e.g., <span class="font-semibold text-blue-800 dark:text-blue-300">$20</span>, <span class="font-semibold text-blue-800 dark:text-blue-300">$50</span>, etc.). We bill from that credit first for:
+              Your monthly plan includes usage credit (like <span class="font-semibold text-blue-800 dark:text-blue-300">$20</span> or <span class="font-semibold text-blue-800 dark:text-blue-300">$50</span>), used for:
             </p>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-              <div class="flex items-start gap-3 p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
-                <svg class="w-6 h-6 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div class="flex items-start gap-3 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-2 border-blue-200 dark:border-blue-800">
+                <svg class="w-7 h-7 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <span class="text-gray-700 dark:text-gray-300">Inbound/Outbound call minutes</span>
+                <div class="flex-1">
+                  <span class="inline-block px-3 py-1 text-xs font-semibold text-blue-700 dark:text-blue-300 bg-blue-100 dark:bg-blue-900/50 rounded-full mb-2">Calls</span>
+                  <p class="text-base font-medium text-gray-900 dark:text-gray-100">Inbound/Outbound call minutes</p>
+                </div>
               </div>
-              <div class="flex items-start gap-3 p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
-                <svg class="w-6 h-6 text-purple-600 dark:text-purple-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div class="flex items-start gap-3 p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg border-2 border-purple-200 dark:border-purple-800">
+                <svg class="w-7 h-7 text-purple-600 dark:text-purple-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
-                <span class="text-gray-700 dark:text-gray-300">AI summaries, transcription, evaluations</span>
+                <div class="flex-1">
+                  <span class="inline-block px-3 py-1 text-xs font-semibold text-purple-700 dark:text-purple-300 bg-purple-100 dark:bg-purple-900/50 rounded-full mb-2">Smart Features (AI)</span>
+                  <p class="text-base font-medium text-gray-900 dark:text-gray-100">Summaries, transcription, evaluations</p>
+                </div>
               </div>
-              <div class="flex items-start gap-3 p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
-                <svg class="w-6 h-6 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div class="flex items-start gap-3 p-4 bg-green-50 dark:bg-green-900/20 rounded-lg border-2 border-green-200 dark:border-green-800">
+                <svg class="w-7 h-7 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                 </svg>
-                <span class="text-gray-700 dark:text-gray-300">Call recording</span>
+                <div class="flex-1">
+                  <span class="inline-block px-3 py-1 text-xs font-semibold text-green-700 dark:text-green-300 bg-green-100 dark:bg-green-900/50 rounded-full mb-2">Recording</span>
+                  <p class="text-base font-medium text-gray-900 dark:text-gray-100">Call recording</p>
+                </div>
               </div>
-              <div class="flex items-start gap-3 p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
-                <svg class="w-6 h-6 text-orange-600 dark:text-orange-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div class="flex items-start gap-3 p-4 bg-orange-50 dark:bg-orange-900/20 rounded-lg border-2 border-orange-200 dark:border-orange-800">
+                <svg class="w-7 h-7 text-orange-600 dark:text-orange-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
-                <span class="text-gray-700 dark:text-gray-300">Fax + OCR (if used)</span>
+                <div class="flex-1">
+                  <span class="inline-block px-3 py-1 text-xs font-semibold text-orange-700 dark:text-orange-300 bg-orange-100 dark:bg-orange-900/50 rounded-full mb-2">Fax</span>
+                  <p class="text-base font-medium text-gray-900 dark:text-gray-100">Fax + OCR (if used)</p>
+                </div>
               </div>
             </div>
 
-            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg p-6 border border-blue-100 dark:border-blue-800">
-              <p class="text-base text-gray-700 dark:text-gray-300 leading-relaxed">
-                <span class="font-semibold text-blue-800 dark:text-blue-300">After credit is used up</span>, extra usage is billed at standard per-minute or per-call rates. <span class="font-medium">Simple.</span>
-              </p>
+            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg p-6 border-2 border-blue-200 dark:border-blue-800">
+              <div class="flex items-start gap-3">
+                <span class="text-2xl">💡</span>
+                <p class="text-base text-gray-700 dark:text-gray-300 leading-relaxed">
+                  After your credit runs out, we simply bill at standard rates — <span class="font-semibold text-blue-800 dark:text-blue-300">no surprise charges, no seat fees, no upsells.</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Pricing Comparison Summary -->
-      <div class="max-w-4xl mx-auto mb-12">
-        <section class="sip-burn bg-zinc-50 dark:bg-gray-800 p-6 lg:p-8 rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg">
-          <h2 class="text-xl lg:text-2xl font-bold mb-6 text-gray-900 dark:text-white">
-            Most Platforms Charge More — and Give You Less
-          </h2>
-          <p class="mb-4 text-gray-700 dark:text-gray-300 leading-relaxed">
-            Many voice providers charge more — and deliver less.
-          </p>
-          <p class="mb-4 text-gray-700 dark:text-gray-300 leading-relaxed">
-            For example, a common DIY option like Twilio offers only raw telephony. You'll pay:
-          </p>
-          <ul class="space-y-3 mb-6 text-gray-700 dark:text-gray-300">
-            <li class="flex items-start gap-3">
-              <span class="text-xl">🔶</span>
-              <span>Over 3× more for inbound minutes</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-xl">🔶</span>
-              <span>About 2× more for outbound minutes</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-xl">❌</span>
-              <span>No built-in dashboards, AI summaries, voicemail handling, or agent tools</span>
-            </li>
-          </ul>
-          <div class="mb-6 p-4 rounded-lg bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800">
-            <p class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
-              <span class="text-xl">💡</span>
-              <span>Why Teams Choose SimpleCallCenter</span>
-            </p>
-            <ul class="space-y-2 text-gray-700 dark:text-gray-300">
-              <li class="flex items-start gap-2">
-                <span class="text-green-600 dark:text-green-400">✅</span>
-                <span>Lower per-minute rates</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-green-600 dark:text-green-400">✅</span>
-                <span>Full platform included (routing, AI, live coaching, recordings, and more)</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-green-600 dark:text-green-400">✅</span>
-                <span>No seat fees. No setup fees. No hidden charges.</span>
-              </li>
-            </ul>
-          </div>
-              <p class="mb-4 text-gray-700 dark:text-gray-300 leading-relaxed font-medium">
-                Everything you need — without the buildout, overhead, or surprises.
-              </p>
-              <div class="mt-6 text-center">
-                <NuxtLink
-                  to="/pricing"
-                  class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 via-purple-700 to-indigo-800 hover:from-purple-500 hover:via-purple-600 hover:to-indigo-700 text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105 active:scale-100 shadow-lg hover:shadow-purple-500/50"
-                >
-                  <span>View Full Pricing Details</span>
-                  <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </NuxtLink>
-              </div>
-              <p class="text-sm text-gray-500 dark:text-gray-400 mt-4">
-                Comparisons are based on public SIP trunking rates from Twilio as of Dec 2025. Twilio is a registered trademark of Twilio Inc.
-              </p>
-            </section>
-          </div>
-
       <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-          <div class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 rounded-xl shadow-lg border border-blue-100 dark:border-gray-600 p-6 lg:p-8">
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-5 flex items-center gap-3">
+          <div class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 rounded-xl shadow-lg border-2 border-blue-200 dark:border-blue-700 p-6 lg:p-8">
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-5 flex items-center gap-3">
               <span class="text-3xl">🧾</span>
-              <span>All plans include:</span>
+              <span>All Plans Include</span>
             </h3>
             <ul class="space-y-3 text-gray-700 dark:text-gray-300">
               <li class="flex items-start gap-3">
@@ -367,8 +379,8 @@
               </li>
             </ul>
           </div>
-          <div class="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-gray-800 dark:to-gray-700 rounded-xl shadow-lg border border-green-100 dark:border-gray-600 p-6 lg:p-8">
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-5 flex items-center gap-3">
+          <div class="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-gray-800 dark:to-gray-700 rounded-xl shadow-lg border-2 border-green-200 dark:border-green-700 p-6 lg:p-8">
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-5 flex items-center gap-3">
               <span class="text-3xl">🎁</span>
               <span>Test for Free</span>
             </h3>
@@ -524,163 +536,13 @@
 
   <!-- Auth Modal -->
   <AuthModal :is-open="authModal.isOpen.value" @close="authModal.close()" />
-
-  <!-- Image Modal -->
-  <div
-    v-if="isModalOpen && selectedImage"
-    @click.self="closeModal"
-    class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-75 backdrop-blur-sm transition-opacity duration-300"
-  >
-    <div class="relative max-w-6xl w-full max-h-[90vh] bg-white dark:bg-gray-800 rounded-2xl shadow-2xl overflow-hidden">
-      <!-- Close Button -->
-      <button
-        @click="closeModal"
-        class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-purple-500"
-        aria-label="Close modal"
-      >
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-
-      <!-- Image Container -->
-      <div class="p-6">
-        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2 text-center">
-          {{ selectedImage.title }}
-        </h3>
-        <p class="text-gray-600 dark:text-gray-400 mb-4 text-center">
-          {{ selectedImage.description }}
-        </p>
-        <div class="bg-gray-100 dark:bg-gray-700 rounded-lg overflow-y-auto max-h-[70vh]">
-          <div class="flex items-center justify-center p-4">
-            <img
-              :src="selectedImage.src"
-              :alt="selectedImage.alt"
-              class="w-full h-auto object-contain"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
 import image from '@/assets/images/bg/bg-startup.webp'
-import dashboardImage from '@/assets/images/front/dashboard.webp'
-import inboundFlowImage from '@/assets/images/front/inbound-flow.webp'
-import agentEvaluationImage from '@/assets/images/front/agent-login-history.webp'
-import cdrViewImage from '@/assets/images/features/ai-control/1-cdr-view.webp'
-import callJourneyImage from '@/assets/images/features/ai-control/2-call-journey.webp'
-import aiReviewImage from '@/assets/images/features/ai-control/3-AI Review.webp'
-import recordingTranscriptImage from '@/assets/images/features/ai-control/4-recording-and-transcript.webp'
-import aiStatisticsImage from '@/assets/images/features/ai-control/5-ai statusics.webp'
 
 const authModal = useAuthModal()
-
-// Modal state for proof block images
-const proofImages = ref([
-  {
-    src: dashboardImage,
-    title: 'Live Dashboard',
-    description: 'Real-time call activity, agent status, and queue metrics',
-    alt: 'Live Dashboard showing real-time call center metrics'
-  },
-  {
-    src: inboundFlowImage,
-    title: 'Inbound Flow',
-    description: 'Visual call flow builder for routing and IVR configuration',
-    alt: 'Visual call flow builder for inbound routing'
-  },
-  {
-    src: agentEvaluationImage,
-    title: 'Agent Evaluation',
-    description: 'Agent login history and performance tracking',
-    alt: 'Agent evaluation and login history tracking'
-  },
-  {
-    src: cdrViewImage,
-    title: 'CDR View',
-    description: 'View call detail records with AI flags and quality indicators',
-    alt: 'CDR view showing AI quality control'
-  },
-  {
-    src: callJourneyImage,
-    title: 'Call Journey',
-    description: 'Track the complete call journey and interaction flow',
-    alt: 'Call journey visualization'
-  },
-  {
-    src: aiReviewImage,
-    title: 'AI Review',
-    description: 'AI automatically reviews and flags calls that need attention',
-    alt: 'AI review interface'
-  },
-  {
-    src: recordingTranscriptImage,
-    title: 'Recording & Transcript',
-    description: 'Access full recordings and transcripts for flagged calls',
-    alt: 'Recording and transcript view'
-  },
-  {
-    src: aiStatisticsImage,
-    title: 'AI Statistics',
-    description: 'Comprehensive statistics and analytics on call quality',
-    alt: 'AI statistics dashboard'
-  }
-])
-
-const selectedImage = ref(null)
-const isModalOpen = ref(false)
-const proofScrollContainer = ref(null)
-
-const openModal = (img) => {
-  selectedImage.value = img
-  isModalOpen.value = true
-  document.body.style.overflow = 'hidden'
-}
-
-const closeModal = () => {
-  isModalOpen.value = false
-  selectedImage.value = null
-  document.body.style.overflow = ''
-}
-
-const scrollProofLeft = () => {
-  if (proofScrollContainer.value) {
-    proofScrollContainer.value.scrollBy({
-      left: -400,
-      behavior: 'smooth'
-    })
-  }
-}
-
-const scrollProofRight = () => {
-  if (proofScrollContainer.value) {
-    proofScrollContainer.value.scrollBy({
-      left: 400,
-      behavior: 'smooth'
-    })
-  }
-}
-
-// Close modal on ESC key
-const handleEscape = (e) => {
-  if (e.key === 'Escape' && isModalOpen.value) {
-    closeModal()
-  }
-}
-
-onMounted(() => {
-  document.addEventListener('keydown', handleEscape)
-})
-
-onUnmounted(() => {
-  document.removeEventListener('keydown', handleEscape)
-  document.body.style.overflow = ''
-})
 
 useHead({
   title: 'SimpleCallCenter – AI-Powered Call Center & Phone Platform',
@@ -688,7 +550,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Real business phone platform for teams. No seat fees. No fake tiers. Pay for usage only. Calls, Quesue, Faxes, AI tools. Try live, free.',
+        'Real business phone platform for teams. No seat fees. No fake tiers. Just pay for usage — calls, faxes, AI tools. Includes internal calling and extensions. Try live, free.',
     },
     {
       name: 'keywords',
