@@ -75,7 +75,7 @@
                 <!-- HubSpot -->
                 <span class="text-xl font-bold tracking-tight" style="color: #FF7A59;">HubSpot</span>
                 <!-- Zendesk -->
-                <span class="text-xl font-bold tracking-tight" style="color: #03363D;">Zendesk</span>
+                <!-- <span class="text-xl font-bold tracking-tight" style="color: #03363D;">Zendesk</span> -->
               </div>
               <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">CRM Integration Works</h3>
               <p class="text-base text-gray-600 dark:text-gray-300">

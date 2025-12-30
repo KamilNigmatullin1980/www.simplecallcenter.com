@@ -62,6 +62,15 @@ export default defineNuxtConfig({
         {
           rel: 'dns-prefetch',
           href: 'https://www.googletagmanager.com'
+        },
+        {
+          rel: 'preconnect',
+          href: 'https://o4509069293518848.ingest.us.sentry.io',
+          crossorigin: 'anonymous'
+        },
+        {
+          rel: 'dns-prefetch',
+          href: 'https://o4509069293518848.ingest.us.sentry.io'
         }
       ],
       script: [
@@ -95,13 +104,5 @@ export default defineNuxtConfig({
   sourcemap: {
     client: 'hidden'
   },
-  sentry: {
-    dsn: 'https://46c2a6c152f36eaeec98b1b7922cdb98@o4509069293518848.ingest.us.sentry.io/4509102049525760',
-    lazy: true,
-    clientInitOptions: {
-      tracesSampleRate: 1.0,
-      replaysSessionSampleRate: 0.1,
-      replaysOnErrorSampleRate: 1.0,
-    }
-  }
+  // Sentry configuration is in sentry.client.config.ts and sentry.server.config.ts
 });
