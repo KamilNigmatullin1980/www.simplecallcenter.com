@@ -14,7 +14,7 @@ useHead({
     {
       name: 'keywords',
       content:
-        'reporting, dashboards, call center analytics, SLA reports, agent performance, queue statistics, call center metrics, SimpleCallCenter',
+        'call center reporting, dashboards, call center analytics, SLA reports, agent performance metrics, queue statistics, usage reporting, SimpleCallCenter',
     },
     { property: 'og:title', content: 'Reporting & Dashboards | SimpleCallCenter' },
     {

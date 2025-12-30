@@ -14,7 +14,7 @@ useHead({
     {
       name: 'keywords',
       content:
-        'real-time agent presence, agent status monitoring, call center workforce management, agent availability, live agent status, SimpleCallCenter',
+        'real-time agent presence, live agent status, agent availability, workforce management, ACD presence data, supervisor live view, SimpleCallCenter',
     },
     { property: 'og:title', content: 'Real-Time Agent Presence | SimpleCallCenter' },
     {

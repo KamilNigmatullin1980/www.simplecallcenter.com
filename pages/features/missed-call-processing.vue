@@ -14,7 +14,7 @@ useHead({
     {
       name: 'keywords',
       content:
-        'missed call processing, missed call tracking, call center missed calls, callback management, call disposition, SimpleCallCenter',
+        'missed call processing, missed call tracking, callback workflow, missed calls workspace, call center missed calls, voicemail vs missed calls, SimpleCallCenter',
     },
     { property: 'og:title', content: 'Missed Call Processing | SimpleCallCenter' },
     {

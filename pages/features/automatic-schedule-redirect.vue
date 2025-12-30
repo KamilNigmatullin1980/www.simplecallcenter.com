@@ -14,7 +14,7 @@ useHead({
     {
       name: 'keywords',
       content:
-        'automatic schedule redirect, business hours, off-hours routing, voicemail, schedule management, call routing, supervisor alerts, SimpleCallCenter',
+        'business hours call routing, schedule-based call redirect, after-hours voicemail, off-hours routing, supervisor alerts, open hours no agents, SimpleCallCenter',
     },
     { property: 'og:title', content: 'Automatic Schedule Redirect | SimpleCallCenter' },
     {

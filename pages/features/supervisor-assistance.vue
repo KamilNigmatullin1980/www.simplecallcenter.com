@@ -14,7 +14,7 @@ useHead({
     {
       name: 'keywords',
       content:
-        'supervisor assistance, call monitoring, whisper mode, barge in, live call support, call center supervision, real-time coaching, SimpleCallCenter',
+        'supervisor assistance, call monitoring, whisper coaching, barge in, live call supervision, real-time agent coaching, SimpleCallCenter',
     },
     { property: 'og:title', content: 'Supervisor Assistance | SimpleCallCenter' },
     {

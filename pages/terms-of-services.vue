@@ -13,7 +13,7 @@ useHead({
     {
       name: 'keywords',
       content:
-        'Terms of Service, SimpleCallCenter, Call Center, SAAS, Terms, Agreement',
+        'terms of service, SimpleCallCenter terms, SaaS user agreement, call center software terms, subscription terms, acceptable use policy',
     },
     { property: 'og:title', content: 'Terms of Service | SimpleCallCenter' },
     {

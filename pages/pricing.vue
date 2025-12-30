@@ -486,7 +486,7 @@ useHead({
     {
       name: 'keywords',
       content:
-        'pricing, call center pricing, scalable pricing, flexible plans, affordable call center, SimpleCallCenter, DID pricing',
+        'usage-based call center pricing, inbound call center pricing, call center plans, per-minute call rates, call recording pricing, transcription pricing, AI call summary pricing, no per-seat fees, direct number pricing, SimpleCallCenter',
     },
     { property: 'og:title', content: 'Pricing | SimpleCallCenter' },
     {

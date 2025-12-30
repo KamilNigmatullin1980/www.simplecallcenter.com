@@ -80,7 +80,7 @@
     title: 'Features | SimpleCallCenter',
     meta: [
       { name: 'description', content: 'Explore all features included in SimpleCallCenter — from AI call evaluation and visual call flows to inbound/outbound routing, dashboards, voicemail automation, and more.' },
-      { name: 'keywords', content: 'call center features, AI phone system, inbound routing, outbound calls, voicemail management, team call routing, real-time dashboard, no seat fee call center' },
+      { name: 'keywords', content: 'SimpleCallCenter features, call center features, AI call evaluation, visual call flow, inbound call routing, outbound calls, call queues, dashboards and reporting, shared voicemail, call recording, call transcription' },
       { property: 'og:title', content: 'Explore Our Awesome Features | SimpleCallCenter' },
       { property: 'og:description', content: 'Discover the robust features of SimpleCallCenter including AI-based automated setup, multilingual IVR, integrated web phone, and advanced call center tools designed for business efficiency.' },
       { property: 'og:type', content: 'website' },

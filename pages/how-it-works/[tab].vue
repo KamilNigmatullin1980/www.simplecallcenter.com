@@ -70,6 +70,8 @@ import AIAgentEfficiency from '~/components/how-it-works/AIAgentEfficiency.vue'
 import QueuesRouting from '~/components/how-it-works/QueuesRouting.vue'
 import VoicemailFollowUps from '~/components/how-it-works/VoicemailFollowUps.vue'
 import MissedCallsFollowUps from '~/components/how-it-works/MissedCallsFollowUps.vue'
+import HubSpotIntegration from '~/components/how-it-works/HubSpotIntegration.vue'
+import ZohoIntegration from '~/components/how-it-works/ZohoIntegration.vue'
 import BillingUsage from '~/components/how-it-works/BillingUsage.vue'
 
 const route = useRoute()
@@ -86,6 +88,8 @@ const sections = [
   { id: 'queues-routing', param: 'queues_routing', title: 'Queues & Routing', component: QueuesRouting },
   { id: 'voicemail-follow-ups', param: 'voicemail_follow_ups', title: 'Voicemail & Follow-Ups', component: VoicemailFollowUps },
   { id: 'missed-calls-follow-ups', param: 'missed_calls_follow_ups', title: 'Missed Calls & Follow Ups', component: MissedCallsFollowUps },
+  { id: 'hubspot-integration', param: 'hubspot_integration', title: 'HubSpot CRM Integration', component: HubSpotIntegration },
+  { id: 'zoho-integration', param: 'zoho_integration', title: 'Zoho CRM Integration', component: ZohoIntegration },
   { id: 'billing-usage', param: 'billing_usage', title: 'Billing & Usage', component: BillingUsage },
 ]
 
@@ -192,6 +196,12 @@ const sectionMeta = computed(() => {
     case 'missed-calls-follow-ups':
       sectionTitle = 'Missed Calls & Follow Ups | How It Works'
       break
+    case 'hubspot-integration':
+      sectionTitle = 'HubSpot CRM Integration | How It Works'
+      break
+    case 'zoho-integration':
+      sectionTitle = 'Zoho CRM Integration | How It Works'
+      break
     case 'billing-usage':
       sectionTitle = 'Billing & Usage | How It Works'
       break
@@ -214,7 +224,7 @@ useHead({
     {
       name: 'keywords',
       content:
-        'how it works, call center guide, inbound calls, outbound calls, AI summaries, call routing, voicemail, dashboards, billing',
+        'SimpleCallCenter how it works, inbound calls, outbound calls, queues and routing, voicemail and missed calls, AI summaries, dashboards, billing and usage',
     },
     { property: 'og:title', content: sectionMeta.value.title },
     {
@@ -231,6 +241,7 @@ useHead({
 <style scoped>
 /* All styling handled via Tailwind */
 </style>
+
 
 
 

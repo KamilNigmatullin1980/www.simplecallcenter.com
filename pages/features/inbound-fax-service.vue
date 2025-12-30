@@ -14,7 +14,7 @@ useHead({
     {
       name: 'keywords',
       content:
-        'inbound fax service, fax to PDF, fax OCR, fax AI summarization, fax management, call center fax, SimpleCallCenter',
+        'inbound fax service, fax to PDF, fax OCR, fax text extraction, AI fax summaries, fax number management, call center fax, SimpleCallCenter',
     },
     { property: 'og:title', content: 'Inbound Fax Service | SimpleCallCenter' },
     {

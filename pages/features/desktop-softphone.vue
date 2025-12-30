@@ -14,7 +14,7 @@ useHead({
     {
       name: 'keywords',
       content:
-        'desktop app, softphone, call center workstation, supervisor console, multi-account support, visual CDR, call recording, transcript, AI quality, SimpleCallCenter',
+        'call center desktop app, desktop softphone, agent workstation, supervisor console, visual CDR, call recordings, call transcripts, AI quality flags, SimpleCallCenter',
     },
     { property: 'og:title', content: 'All-in-One Desktop App | SimpleCallCenter' },
     {

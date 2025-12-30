@@ -43,7 +43,7 @@ useHead({
     {
       name: 'keywords',
       content:
-        'FAQ, frequently asked questions, SimpleCallCenter help, call center questions, support, SimpleCallCenter',
+        'SimpleCallCenter FAQ, call center software questions, pricing and billing, setup guide, features overview, integrations, call routing, AI call summaries, support',
     },
     { property: 'og:title', content: 'FAQ | SimpleCallCenter' },
     {

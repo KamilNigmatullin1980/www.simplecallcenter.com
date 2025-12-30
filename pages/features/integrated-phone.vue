@@ -13,7 +13,7 @@ useHead({
     {
       name: 'keywords',
       content:
-        'integrated web phone, browser-based phone, seamless communication, high-quality calls, call center, SimpleCallCenter',
+        'integrated web phone, browser-based softphone, web phone for call center, no download phone, high-quality calls in browser, SimpleCallCenter',
     },
     { property: 'og:title', content: 'Integrated Web Phone | SimpleCallCenter' },
     {

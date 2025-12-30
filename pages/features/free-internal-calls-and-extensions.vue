@@ -14,7 +14,7 @@ useHead({
     {
       name: 'keywords',
       content:
-        'internal calls, extensions, free internal calls, SIP extensions, call transfers, office phone system, SimpleCallCenter',
+        'free internal calls, business phone extensions, SIP extensions, internal phone system, call transfers, office phone system, SimpleCallCenter',
     },
     { property: 'og:title', content: 'Free Internal Calls & Extensions | SimpleCallCenter' },
     {

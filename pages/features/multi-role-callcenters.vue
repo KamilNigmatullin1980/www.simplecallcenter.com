@@ -14,7 +14,7 @@ useHead({
     {
       name: 'keywords',
       content:
-        'agent flexibility, multi-role routing, multi-queue support, call center agents, agent management, flexible routing, SimpleCallCenter',
+        'agent flexibility, multi-role agents, multi-queue support, multi-call center support, wrap-up time, fair routing logic, workforce flexibility, SimpleCallCenter',
     },
     { property: 'og:title', content: 'Agent Flexibility | SimpleCallCenter' },
     {

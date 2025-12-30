@@ -12,7 +12,7 @@ useHead({
     {
       name: 'keywords',
       content:
-        'multilingual IVR, IVR translation, automated IVR, Google TTS, multilingual call center, IVR menu, hotline configuration, SimpleCallCenter',
+        'multilingual IVR, IVR translation, Google TTS voices, translated IVR prompts, IVR menu customization, multilingual call center, SimpleCallCenter',
     },
     { property: 'og:title', content: 'Multilingual IVR Creation | SimpleCallCenter' },
     {

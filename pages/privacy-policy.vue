@@ -13,7 +13,7 @@ useHead({
     {
       name: 'keywords',
       content:
-        'Privacy Policy, SimpleCallCenter, SAAS, Call Center, Data Protection, Personal Information',
+        'privacy policy, SimpleCallCenter privacy, data privacy, personal information, data protection, SaaS privacy policy, usage data',
     },
     { property: 'og:title', content: 'Privacy Policy | SimpleCallCenter' },
     {

@@ -117,6 +117,11 @@ useHead({
       name: 'description', 
       content: 'SimpleCallCenter is built by real people for real support teams. Learn about our mission, values, and commitment to transparent pricing and customer-first design.' 
     },
+    {
+      name: 'keywords',
+      content:
+        'about SimpleCallCenter, Simple Communications LLC, call center platform mission, customer-first design, transparent pricing, no per-seat fees, SimpleCallCenter',
+    },
     { property: 'og:title', content: 'About Us | SimpleCallCenter' },
     { 
       property: 'og:description', 

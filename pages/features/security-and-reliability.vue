@@ -14,7 +14,7 @@ useHead({
     {
       name: 'keywords',
       content:
-        'security, reliability, multi-region redundancy, encryption, TLS, call center security, privacy controls, SimpleCallCenter',
+        'call center security, reliability, multi-region redundancy, disaster recovery, encryption, TLS, recording privacy controls, SimpleCallCenter',
     },
     { property: 'og:title', content: 'Security & Reliability | SimpleCallCenter' },
     {

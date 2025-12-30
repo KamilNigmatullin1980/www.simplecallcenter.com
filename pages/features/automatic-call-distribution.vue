@@ -14,7 +14,7 @@ useHead({
     {
       name: 'keywords',
       content:
-        'ACD system, advanced call distribution, call routing, position announcement, SLA reporting, call queue, voicemail integration, call center, SimpleCallCenter',
+        'automatic call distribution system, ACD, inbound call routing, call queue, position announcements, SLA timers, voicemail routing, SimpleCallCenter',
     },
     { property: 'og:title', content: 'Automatic Call Distribution System | SimpleCallCenter' },
     {

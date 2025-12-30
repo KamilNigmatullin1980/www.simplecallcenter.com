@@ -19,7 +19,7 @@ useHead({
     {
       name: 'keywords',
       content:
-        'call quality control, AI quality assurance, call monitoring, speech-to-text, call transcription, quality control, call center QA, SimpleCallCenter',
+        'AI call quality control, call quality assurance, call monitoring, call transcription, AI call summaries, flagged calls, call center QA, SimpleCallCenter',
     },
     { property: 'og:title', content: 'Quality Control With AI | SimpleCallCenter' },
     {

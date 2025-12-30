@@ -555,7 +555,7 @@ useHead({
     {
       name: 'keywords',
       content:
-        'AI call center software, virtual call center platform, business phone system, desktop app, multilingual IVR, call queue system, VoIP call center, shared voicemail, inbound fax service, AI quality monitoring, no per seat pricing, usage-based pricing, auto-answer, whisper feature, eavesdrop, call transcription, agent evaluation, AI summaries, voicemail transcription, missed call follow-up, live dashboard, call notes, AI scoring',
+        'AI-powered call center platform, business phone system, usage-based call center pricing, unlimited agents, inbound call routing, call queues, multilingual IVR, call recording, call transcription, AI call summaries, call quality monitoring, shared voicemail, inbound fax, internal calling, extensions, SimpleCallCenter',
     },
     {
       property: 'og:title',

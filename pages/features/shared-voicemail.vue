@@ -14,7 +14,7 @@ useHead({
     {
       name: 'keywords',
       content:
-        'shared voicemail, voicemail processing, voicemail transcription, voicemail workflow, missed calls, call center voicemail, SimpleCallCenter',
+        'shared voicemail processing, voicemail workflow, voicemail transcription, AI voicemail summaries, missed calls workspace, voicemail assignment tracking, SimpleCallCenter',
     },
     { property: 'og:title', content: 'Shared Voicemail Processing | SimpleCallCenter' },
     {

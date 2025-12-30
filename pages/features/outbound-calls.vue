@@ -14,7 +14,7 @@ useHead({
     {
       name: 'keywords',
       content:
-        'outbound calls, call center outbound, manual dialing, caller ID control, outbound call recording, outbound QA, SimpleCallCenter',
+        'outbound calls, manual outbound dialing, caller ID control, outbound call recording, AI quality assurance, outbound calling from desktop app, SimpleCallCenter',
     },
     { property: 'og:title', content: 'Outbound Calls | SimpleCallCenter' },
     {

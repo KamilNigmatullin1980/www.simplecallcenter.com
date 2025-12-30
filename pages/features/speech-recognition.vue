@@ -14,7 +14,7 @@ useHead({
     {
       name: 'keywords',
       content:
-        'interactive IVR, speech recognition, DTMF support, dynamic IVR, call center IVR, advanced IVR, multilingual IVR, SimpleCallCenter',
+        'interactive IVR, speech recognition IVR, DTMF support, voice commands, multilingual IVR, IVR menu, call routing via IVR, SimpleCallCenter',
     },
     { property: 'og:title', content: 'Automatic IVR Menu with Advanced Options | SimpleCallCenter' },
     {

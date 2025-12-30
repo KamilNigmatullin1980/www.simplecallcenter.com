@@ -15,7 +15,7 @@ useHead({
     {
       name: 'keywords',
       content:
-        'AI-driven setup, automated call center, IVR configuration, synthetic voice, multilingual call center, office schedule, state holidays, call center automation',
+        'fully automated call center setup, AI-driven setup, automated IVR configuration, voicemail setup, ACD setup, schedule and holidays, multilingual setup, SimpleCallCenter',
     },
     { property: 'og:title', content: 'AI-Driven, Fully Automated Setup | SimpleCallCenter' },
     {

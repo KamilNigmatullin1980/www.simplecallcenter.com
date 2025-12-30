@@ -14,7 +14,7 @@ useHead({
     {
       name: 'keywords',
       content:
-        'visual call flow, advanced CDR, call detail records, call timeline, call analytics, call tracking, SimpleCallCenter',
+        'visual call flow, advanced CDR, call detail records, call timeline, call journey, call recording, call transcript, AI call review, SimpleCallCenter',
     },
     { property: 'og:title', content: 'Visual Call Flow & Advanced CDR | SimpleCallCenter' },
     {

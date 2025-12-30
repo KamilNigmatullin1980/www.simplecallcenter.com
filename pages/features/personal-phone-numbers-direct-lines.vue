@@ -14,7 +14,7 @@ useHead({
     {
       name: 'keywords',
       content:
-        'personal phone numbers, direct lines, direct DIDs, private phone numbers, personal extensions, call center direct lines, SimpleCallCenter',
+        'personal phone numbers, direct lines, direct DIDs, personal direct numbers, ring multiple devices, private call recordings, SimpleCallCenter',
     },
     { property: 'og:title', content: 'Personal Phone Numbers (Direct Lines) | SimpleCallCenter' },
     {
