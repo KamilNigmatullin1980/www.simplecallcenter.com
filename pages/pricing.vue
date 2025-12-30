@@ -17,6 +17,11 @@
         </p>
       </div>
 
+      <!-- Pricing Calculator -->
+      <div class="max-w-5xl mx-auto mb-12 lg:mb-20">
+        <PricingCalculator />
+      </div>
+
       <!-- Usage Rates Section -->
       <div class="max-w-7xl mx-auto mb-12 lg:mb-20">
         <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 lg:p-12">
@@ -474,6 +479,7 @@
 import { ref } from 'vue'
 import image from '@/assets/images/bg/bg-startup.webp'
 import { useHead } from '#imports'
+import PricingCalculator from '@/components/PricingCalculator.vue'
 
 useHead({
   title: 'Pricing | SimpleCallCenter',

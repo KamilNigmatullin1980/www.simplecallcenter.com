@@ -41,10 +41,10 @@
                 {{ item.desc }}
               </p>
 
-              <!-- “Read More” will stay at bottom -->
+              <!-- "Read More" will stay at bottom -->
               <a
-                v-if="item.path"
-                @click="navigateTo(`/features/${item.path}`)"
+                v-if="item.path || item.howItWorksPath"
+                @click="navigateTo(item.howItWorksPath ? `/how-it-works/${item.howItWorksPath}` : `/features/${item.path}`)"
                 class="mt-auto inline-flex items-center text-purple-600 dark:text-purple-400 font-semibold hover:text-purple-700 dark:hover:text-purple-300 transition-all duration-300 group/link cursor-pointer"
               >
                 <span class="mr-2">Learn more</span>
@@ -79,10 +79,10 @@
   useHead({
     title: 'Features | SimpleCallCenter',
     meta: [
-      { name: 'description', content: 'Explore all features included in SimpleCallCenter — from AI call evaluation and visual call flows to inbound/outbound routing, dashboards, voicemail automation, and more.' },
-      { name: 'keywords', content: 'SimpleCallCenter features, call center features, AI call evaluation, visual call flow, inbound call routing, outbound calls, call queues, dashboards and reporting, shared voicemail, call recording, call transcription' },
+      { name: 'description', content: 'Explore all features included in SimpleCallCenter — from AI call evaluation and visual call flows to inbound/outbound routing, dashboards, voicemail automation, HubSpot and Zoho CRM integrations, and more.' },
+      { name: 'keywords', content: 'SimpleCallCenter features, call center features, AI call evaluation, visual call flow, inbound call routing, outbound calls, call queues, dashboards and reporting, shared voicemail, call recording, call transcription, HubSpot CRM integration, Zoho CRM integration' },
       { property: 'og:title', content: 'Explore Our Awesome Features | SimpleCallCenter' },
-      { property: 'og:description', content: 'Discover the robust features of SimpleCallCenter including AI-based automated setup, multilingual IVR, integrated web phone, and advanced call center tools designed for business efficiency.' },
+      { property: 'og:description', content: 'Discover the robust features of SimpleCallCenter including AI-based automated setup, multilingual IVR, integrated web phone, CRM integrations (HubSpot & Zoho), and advanced call center tools designed for business efficiency.' },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://simplecallcenter.com/features' },
     ],
@@ -107,7 +107,8 @@
     { icon: 'uil uil-phone-volume',        name: 'Free Internal Calls, Extensions & Transfers',                   desc: 'Every user gets a free internal extension that works on SIP desk phones, softphones, and our mobile app with push wake-up. Incoming calls can be warm-transferred to any extension, and personal voicemail with SIP MWI is coming soon.', path: 'free-internal-calls-and-extensions' },
     { icon: 'uil uil-desktop',             name: 'All-in-One Desktop App',        desc: 'One desktop app for everyone: a softphone for users, a full call center workstation for agents, and a real-time monitoring console for supervisors — with multi-account support, visual CDRs, recordings, transcripts, and AI quality flags built in.', path: 'desktop-softphone' },
     
-
+    { icon: 'uil uil-link',                name: 'HubSpot CRM Integration',       desc: 'Connect to HubSpot through OAuth to automatically log calls, create or update contacts, and keep your CRM in sync. Every call appears on the contact timeline with recording, transcript, and AI summary links — no manual copy-paste needed.', howItWorksPath: 'hubspot_integration' },
+    { icon: 'uil uil-link',                name: 'Zoho CRM Integration',          desc: 'OAuth-based Zoho CRM sync that matches callers to leads or contacts, logs call activities with all details, and assigns ownership to the right user. Clean sync with no duplicate entries, and full control over what gets written to your CRM.', howItWorksPath: 'zoho_integration' },
     
     
     

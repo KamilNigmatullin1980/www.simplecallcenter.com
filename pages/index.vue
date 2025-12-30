@@ -39,7 +39,7 @@
             
             <!-- Content -->
             <span class="relative z-10 flex items-center gap-3">
-              <span class="font-extrabold tracking-tight">Try It Live — Free $1 Credit</span>
+              <span class="font-extrabold tracking-tight">Start free</span>
               <svg class="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
@@ -48,11 +48,12 @@
             <!-- Shine effect on hover -->
             <div class="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-shine transition-opacity duration-500"></div>
           </button>
+          No credit card • 2 minutes to setup
           <div class="flex flex-col sm:flex-row gap-6 mt-6 max-w-5xl mx-auto">
             <!-- Box 1 — AI Credit -->
             <div class="flex-1 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-8 border border-gray-200 dark:border-gray-700 shadow-lg">
               <div class="text-5xl mb-4">🎁</div>
-              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">$1 in Free AI Credit</h3>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Unlimited calls to test  and $1 credit for AI Features</h3>
               <p class="text-base text-gray-600 dark:text-gray-300">
                 Covers call summaries, quality checks, and performance insights.
               </p>
@@ -100,10 +101,10 @@
           Tired of overpriced call software and fake AI agents?
         </h2>
 
-        <!-- Three Boxes -->
-        <div class="flex flex-col sm:flex-row gap-6">
+        <!-- Four Boxes -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <!-- Box 1 — Problem -->
-          <div class="flex-1 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-8 border border-gray-200 dark:border-gray-700 shadow-lg">
+          <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-8 border border-gray-200 dark:border-gray-700 shadow-lg">
             <div class="text-5xl mb-4">🔥</div>
             <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
               Most platforms punish you for growing.
@@ -114,7 +115,7 @@
           </div>
 
           <!-- Box 2 — Solution -->
-          <div class="flex-1 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-8 border border-gray-200 dark:border-gray-700 shadow-lg">
+          <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-8 border border-gray-200 dark:border-gray-700 shadow-lg">
             <div class="text-5xl mb-4">✅</div>
             <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
               We built SimpleCallCenter for real support teams — not for replacing them.
@@ -142,7 +143,7 @@
           </div>
 
           <!-- Box 3 — Best Part -->
-          <div class="flex-1 bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-purple-900/30 dark:to-indigo-900/30 backdrop-blur-sm rounded-xl p-8 border-2 border-purple-200 dark:border-purple-800 shadow-lg">
+          <div class="bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-purple-900/30 dark:to-indigo-900/30 backdrop-blur-sm rounded-xl p-8 border-2 border-purple-200 dark:border-purple-800 shadow-lg">
             <div class="text-5xl mb-4">💵</div>
             <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
               And the best part?
@@ -169,10 +170,90 @@
               Just honest pricing that doesn't make you feel tricked.
             </p>
           </div>
+
+          <!-- Box 4 — Real-world Example -->
+          <div class="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/30 dark:to-emerald-900/30 backdrop-blur-sm rounded-xl p-8 border-2 border-green-200 dark:border-green-800 shadow-lg">
+            <div class="text-5xl mb-4">💰</div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              $20/month is enough for most small teams
+            </h3>
+            <p class="text-base text-gray-600 dark:text-gray-300 mb-3">
+              Replace a business mobile phone with a professional system.
+            </p>
+            <p class="text-base text-gray-600 dark:text-gray-300 mb-2">
+              <strong class="font-semibold text-gray-900 dark:text-white">For the $20 minimum, you get ~8,000 inbound minutes</strong> (~133 hours)
+            </p>
+            <p class="text-base text-gray-600 dark:text-gray-300 mb-3">
+              <strong class="font-semibold text-gray-900 dark:text-white">Turn on recording and you still get ~4,400 minutes</strong> (~74 hours recorded)
+            </p>
+            <p class="text-sm text-gray-600 dark:text-gray-400 italic">
+              Plenty unless you're talking nonstop — for less than a typical mobile phone plan.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Calculator Button -->
+        <div class="text-center mt-10">
+          <button
+            @click="showCalculator = true"
+            class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
+          >
+            <span class="text-2xl">🧮</span>
+            <span>Open Pricing Calculator</span>
+          </button>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Sticky Floating Calculator Button -->
+  <Teleport to="body">
+    <Transition name="float">
+      <button
+        v-if="!showCalculator"
+        @click="showCalculator = true"
+        class="fixed top-1/2 z-40 group"
+        style="right: -20px; transform: translateY(-50%) rotate(-90deg);"
+        aria-label="Open Pricing Calculator"
+      >
+        <!-- Button with rotation -->
+        <div class="relative flex items-center gap-3 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 px-5 py-3 rounded-full">
+          <span class="text-2xl">🧮</span>
+          <span class="font-bold text-base whitespace-nowrap">Calculator</span>
+          <!-- Subtle Pulse Animation Ring -->
+          <div class="absolute inset-0 rounded-full bg-purple-400 animate-soft-pulse"></div>
+        </div>
+      </button>
+    </Transition>
+  </Teleport>
+
+  <!-- Pricing Calculator Modal -->
+  <Teleport to="body">
+    <Transition name="modal">
+      <div
+        v-if="showCalculator"
+        class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+        @click.self="showCalculator = false"
+      >
+        <div class="relative w-full max-w-6xl max-h-[90vh] overflow-y-auto bg-white dark:bg-gray-900 rounded-2xl shadow-2xl">
+          <!-- Close Button -->
+          <button
+            @click="showCalculator = false"
+            class="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 transition-colors"
+          >
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          
+          <!-- Calculator Component -->
+          <div class="p-6">
+            <PricingCalculator />
+          </div>
+        </div>
+      </div>
+    </Transition>
+  </Teleport>
 
   <setup-preview />
  
@@ -540,9 +621,12 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import image from '@/assets/images/bg/bg-startup.webp'
+import PricingCalculator from '@/components/PricingCalculator.vue'
 
 const authModal = useAuthModal()
+const showCalculator = ref(false)
 
 useHead({
   title: 'SimpleCallCenter – AI-Powered Call Center & Phone Platform',
@@ -639,7 +723,7 @@ const features = [
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
     </svg>`,
     title: 'Smart IVRs',
-    description: 'Auto-generated based on your queues and languages. Text-to-speech in 188 languages. Supports voice commands + keypad input (simultaneously)'
+    description: 'Auto-generated based on your queues and languages. Text-to-speech in 80+ languages. Supports voice commands + keypad input (simultaneously)'
   },
   {
     icon: `<svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -689,5 +773,55 @@ const features = [
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Modal transitions */
+.modal-enter-active,
+.modal-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.modal-enter-from,
+.modal-leave-to {
+  opacity: 0;
+}
+
+.modal-enter-active .relative,
+.modal-leave-active .relative {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.modal-enter-from .relative,
+.modal-leave-to .relative {
+  transform: scale(0.95);
+  opacity: 0;
+}
+
+/* Floating button transitions */
+.float-enter-active,
+.float-leave-active {
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.float-enter-from,
+.float-leave-to {
+  transform: translateX(200px);
+  opacity: 0;
+}
+
+/* Soft pulse animation for calculator button */
+@keyframes soft-pulse {
+  0%, 100% {
+    opacity: 0.05;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.15;
+    transform: scale(1.05);
+  }
+}
+
+.animate-soft-pulse {
+  animation: soft-pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 </style>
