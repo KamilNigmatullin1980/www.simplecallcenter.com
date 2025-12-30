@@ -8,7 +8,8 @@ export default defineNuxtConfig({
   css: ["~/assets/app.css"],
   modules: [
     '@nuxtjs/sitemap',
-    'nuxt-gtag'
+    'nuxt-gtag',
+    '@sentry/nuxt'
   ],
   'gtag': {
     id: 'G-174B2J6P8J',
@@ -93,5 +94,14 @@ export default defineNuxtConfig({
   },
   sourcemap: {
     client: 'hidden'
+  },
+  sentry: {
+    dsn: 'https://46c2a6c152f36eaeec98b1b7922cdb98@o4509069293518848.ingest.us.sentry.io/4509102049525760',
+    lazy: true,
+    clientInitOptions: {
+      tracesSampleRate: 1.0,
+      replaysSessionSampleRate: 0.1,
+      replaysOnErrorSampleRate: 1.0,
+    }
   }
 });
