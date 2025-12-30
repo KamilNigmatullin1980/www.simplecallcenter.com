@@ -38,7 +38,7 @@
         v-show="item.show"
         class="px-6 pb-5 pt-2 text-gray-700 dark:text-gray-300 leading-relaxed border-t border-gray-100 dark:border-gray-700 animate-fade-in"
       >
-        <p class="whitespace-pre-line">{{ item.answer }}</p>
+        <p class="whitespace-pre-line" v-html="item.answer"></p>
       </div>
     </div>
   </div>
@@ -157,7 +157,7 @@ const datas = ref([
     id: "headingFourteen",
     collapseId: "collapseFourteen",
     question: "Does this integrate with other CRMs like HubSpot or Salesforce?",
-    answer: "Not yet — but we're open to it. SimpleCallCenter comes with a built-in mini-CRM, fully integrated from day one. Most teams find it covers everything they need: contact management, follow-up notes, and an issue tracker tied to call history. That said, if you're already using another system, let us know — we're actively collecting requests to prioritize future integrations.",
+    answer: "Yes! We currently support <strong>HubSpot</strong> and <strong>Zoho CRM</strong> integrations via OAuth. When connected, every call is automatically logged in your CRM with full details — direction, duration, recording links, transcripts, and AI summaries (if enabled). Contacts are created or updated automatically, and calls are assigned to the right agent/owner.<br><br>Learn more: <a href='/how-it-works/hubspot_integration' class='text-purple-600 dark:text-purple-400 hover:underline font-semibold'>HubSpot Integration</a> | <a href='/how-it-works/zoho_integration' class='text-purple-600 dark:text-purple-400 hover:underline font-semibold'>Zoho Integration</a>",
     show: false
   },
   {

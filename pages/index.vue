@@ -198,8 +198,8 @@
             @click="showCalculator = true"
             class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
           >
-            <span class="text-2xl">🧮</span>
-            <span>Open Pricing Calculator</span>
+            <span class="text-2xl">💰</span>
+            <span>Estimate Your Cost</span>
           </button>
         </div>
       </div>
@@ -214,12 +214,12 @@
         @click="showCalculator = true"
         class="fixed top-1/2 z-40 group"
         style="right: -20px; transform: translateY(-50%) rotate(-90deg);"
-        aria-label="Open Pricing Calculator"
+        aria-label="Estimate cost"
       >
         <!-- Button with rotation -->
         <div class="relative flex items-center gap-3 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 px-5 py-3 rounded-full">
-          <span class="text-2xl">🧮</span>
-          <span class="font-bold text-base whitespace-nowrap">Calculator</span>
+          <span class="text-2xl">💰</span>
+          <span class="font-bold text-base whitespace-nowrap">Estimate cost</span>
           <!-- Subtle Pulse Animation Ring -->
           <div class="absolute inset-0 rounded-full bg-purple-400 animate-soft-pulse"></div>
         </div>
