@@ -103,18 +103,24 @@
 
         <!-- Four Boxes -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <!-- Box 1 — Problem -->
+          <!-- Box 1 — Problem/Solution -->
           <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-8 border border-gray-200 dark:border-gray-700 shadow-lg">
             <div class="text-5xl mb-4">🔥</div>
             <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
               Most platforms punish you for growing.
             </h3>
-            <p class="text-base text-gray-600 dark:text-gray-300">
-              They charge per agent, lock you into contracts, and pitch "AI agents" that butcher your customer experience.
+            <p class="text-base text-gray-600 dark:text-gray-300 mb-4">
+              They charge per agent, lock you into contracts, and sell "AI agents" that frustrate customers.
+            </p>
+            <p class="text-base text-gray-600 dark:text-gray-300 mb-4">
+              SimpleCallCenter keeps it simple: unlimited agents, usage-based pricing, and AI that supports your team (only when you turn it on).
+            </p>
+            <p class="text-base font-semibold text-purple-800 dark:text-purple-300">
+              Try the calculator — see what $20/month buys you in real call time.
             </p>
           </div>
 
-          <!-- Box 2 — Solution -->
+          <!-- Box 2 — Solution Details -->
           <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-8 border border-gray-200 dark:border-gray-700 shadow-lg">
             <div class="text-5xl mb-4">✅</div>
             <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
@@ -192,68 +198,13 @@
           </div>
         </div>
         
-        <!-- Calculator Button -->
-        <div class="text-center mt-10">
-          <button
-            @click="showCalculator = true"
-            class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
-          >
-            <span class="text-2xl">💰</span>
-            <span>Estimate Your Cost</span>
-          </button>
+        <!-- Calculator Component (embedded) -->
+        <div class="mt-10 max-w-6xl mx-auto">
+          <PricingCalculator />
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Sticky Floating Calculator Button -->
-  <Teleport to="body">
-    <Transition name="float">
-      <button
-        v-if="!showCalculator"
-        @click="showCalculator = true"
-        class="fixed top-1/2 z-40 group"
-        style="right: -20px; transform: translateY(-50%) rotate(-90deg);"
-        aria-label="Estimate cost"
-      >
-        <!-- Button with rotation -->
-        <div class="relative flex items-center gap-3 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 px-5 py-3 rounded-full">
-          <span class="text-2xl">💰</span>
-          <span class="font-bold text-base whitespace-nowrap">Estimate cost</span>
-          <!-- Subtle Pulse Animation Ring -->
-          <div class="absolute inset-0 rounded-full bg-purple-400 animate-soft-pulse"></div>
-        </div>
-      </button>
-    </Transition>
-  </Teleport>
-
-  <!-- Pricing Calculator Modal -->
-  <Teleport to="body">
-    <Transition name="modal">
-      <div
-        v-if="showCalculator"
-        class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
-        @click.self="showCalculator = false"
-      >
-        <div class="relative w-full max-w-6xl max-h-[90vh] overflow-y-auto bg-white dark:bg-gray-900 rounded-2xl shadow-2xl">
-          <!-- Close Button -->
-          <button
-            @click="showCalculator = false"
-            class="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 transition-colors"
-          >
-            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-          
-          <!-- Calculator Component -->
-          <div class="p-6">
-            <PricingCalculator />
-          </div>
-        </div>
-      </div>
-    </Transition>
-  </Teleport>
 
   <setup-preview />
  
@@ -621,12 +572,10 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
 import image from '@/assets/images/bg/bg-startup.webp'
 import PricingCalculator from '@/components/PricingCalculator.vue'
 
 const authModal = useAuthModal()
-const showCalculator = ref(false)
 
 useHead({
   title: 'SimpleCallCenter – AI-Powered Call Center & Phone Platform',
@@ -773,55 +722,5 @@ const features = [
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
-}
-
-/* Modal transitions */
-.modal-enter-active,
-.modal-leave-active {
-  transition: opacity 0.3s ease;
-}
-
-.modal-enter-from,
-.modal-leave-to {
-  opacity: 0;
-}
-
-.modal-enter-active .relative,
-.modal-leave-active .relative {
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.modal-enter-from .relative,
-.modal-leave-to .relative {
-  transform: scale(0.95);
-  opacity: 0;
-}
-
-/* Floating button transitions */
-.float-enter-active,
-.float-leave-active {
-  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.float-enter-from,
-.float-leave-to {
-  transform: translateX(200px);
-  opacity: 0;
-}
-
-/* Soft pulse animation for calculator button */
-@keyframes soft-pulse {
-  0%, 100% {
-    opacity: 0.05;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.15;
-    transform: scale(1.05);
-  }
-}
-
-.animate-soft-pulse {
-  animation: soft-pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 </style>
