@@ -40,20 +40,39 @@
               </div>
               <h3 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Voice Rates</h3>
             </div>
-            <div class="overflow-x-auto -mx-4 sm:mx-0">
+            <!-- Mobile Card Layout -->
+            <div class="md:hidden space-y-3">
+              <div
+                v-for="(rate, ridx) in voiceRates"
+                :key="ridx"
+                class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-200 dark:border-gray-600"
+              >
+                <div class="font-semibold text-gray-900 dark:text-white mb-3 text-sm">{{ rate.type }}</div>
+                <div class="grid grid-cols-2 gap-3">
+                  <div>
+                    <div class="text-xs text-gray-500 dark:text-gray-400 mb-1">In Subscription</div>
+                    <span class="inline-flex items-center px-2 py-1 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 font-bold text-sm">
+                      ${{ rate.inSubscription }}
+                    </span>
+                  </div>
+                  <div>
+                    <div class="text-xs text-gray-500 dark:text-gray-400 mb-1">Out of Subscription</div>
+                    <span class="inline-flex items-center px-2 py-1 rounded-lg bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400 font-bold text-sm">
+                      ${{ rate.outOfSubscription }}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Desktop Table Layout -->
+            <div class="hidden md:block overflow-x-auto -mx-4 sm:mx-0">
               <div class="inline-block min-w-full align-middle px-4 sm:px-0">
-                <table class="w-full min-w-[600px]">
+                <table class="w-full">
                   <thead>
                     <tr class="border-b-2 border-gray-200 dark:border-gray-700">
                       <th class="text-left py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-sm sm:text-base">Type</th>
-                      <th class="text-center py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-xs sm:text-base">
-                        <span class="hidden sm:inline">In Subscription</span>
-                        <span class="sm:hidden">In Sub</span>
-                      </th>
-                      <th class="text-center py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-xs sm:text-base">
-                        <span class="hidden sm:inline">Out of Subscription</span>
-                        <span class="sm:hidden">Out of Sub</span>
-                      </th>
+                      <th class="text-center py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-xs sm:text-base">In Subscription</th>
+                      <th class="text-center py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-xs sm:text-base">Out of Subscription</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -93,20 +112,35 @@
               </div>
               <h3 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Call Recording</h3>
             </div>
-            <div class="overflow-x-auto -mx-4 sm:mx-0">
+            <!-- Mobile Card Layout -->
+            <div class="md:hidden">
+              <div class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-200 dark:border-gray-600">
+                <div class="font-semibold text-gray-900 dark:text-white mb-3 text-sm">Call recording / minute</div>
+                <div class="grid grid-cols-2 gap-3">
+                  <div>
+                    <div class="text-xs text-gray-500 dark:text-gray-400 mb-1">In Subscription</div>
+                    <span class="inline-flex items-center px-2 py-1 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 font-bold text-sm">
+                      ${{ recordingRates.inSubscription }}
+                    </span>
+                  </div>
+                  <div>
+                    <div class="text-xs text-gray-500 dark:text-gray-400 mb-1">Out of Subscription</div>
+                    <span class="inline-flex items-center px-2 py-1 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 font-bold text-sm">
+                      ${{ recordingRates.outOfSubscription }}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Desktop Table Layout -->
+            <div class="hidden md:block overflow-x-auto -mx-4 sm:mx-0">
               <div class="inline-block min-w-full align-middle px-4 sm:px-0">
-                <table class="w-full min-w-[600px]">
+                <table class="w-full">
                   <thead>
                     <tr class="border-b-2 border-gray-200 dark:border-gray-700">
                       <th class="text-left py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-sm sm:text-base">Type</th>
-                      <th class="text-center py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-xs sm:text-base">
-                        <span class="hidden sm:inline">In Subscription</span>
-                        <span class="sm:hidden">In Sub</span>
-                      </th>
-                      <th class="text-center py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-xs sm:text-base">
-                        <span class="hidden sm:inline">Out of Subscription</span>
-                        <span class="sm:hidden">Out of Sub</span>
-                      </th>
+                      <th class="text-center py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-xs sm:text-base">In Subscription</th>
+                      <th class="text-center py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-xs sm:text-base">Out of Subscription</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -142,20 +176,42 @@
               </div>
               <h3 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Transcription & AI</h3>
             </div>
-            <div class="overflow-x-auto -mx-4 sm:mx-0">
+            <!-- Mobile Card Layout -->
+            <div class="md:hidden space-y-3">
+              <div
+                v-for="(item, tidx) in transcriptionRates"
+                :key="tidx"
+                class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-200 dark:border-gray-600"
+              >
+                <div class="font-semibold text-gray-900 dark:text-white mb-3 text-sm">
+                  {{ item.type }}
+                  <span v-if="item.note" class="ml-2 text-xs text-gray-500 dark:text-gray-400">*</span>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                  <div>
+                    <div class="text-xs text-gray-500 dark:text-gray-400 mb-1">In Subscription</div>
+                    <span class="inline-flex items-center px-2 py-1 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 font-bold text-sm">
+                      {{ item.inSubscription }}
+                    </span>
+                  </div>
+                  <div>
+                    <div class="text-xs text-gray-500 dark:text-gray-400 mb-1">Out of Subscription</div>
+                    <span class="inline-flex items-center px-2 py-1 rounded-lg bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400 font-bold text-sm">
+                      {{ item.outOfSubscription }}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Desktop Table Layout -->
+            <div class="hidden md:block overflow-x-auto -mx-4 sm:mx-0">
               <div class="inline-block min-w-full align-middle px-4 sm:px-0">
-                <table class="w-full min-w-[600px]">
+                <table class="w-full">
                   <thead>
                     <tr class="border-b-2 border-gray-200 dark:border-gray-700">
                       <th class="text-left py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-sm sm:text-base">Type</th>
-                      <th class="text-center py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-xs sm:text-base">
-                        <span class="hidden sm:inline">In Subscription</span>
-                        <span class="sm:hidden">In Sub</span>
-                      </th>
-                      <th class="text-center py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-xs sm:text-base">
-                        <span class="hidden sm:inline">Out of Subscription</span>
-                        <span class="sm:hidden">Out of Sub</span>
-                      </th>
+                      <th class="text-center py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-xs sm:text-base">In Subscription</th>
+                      <th class="text-center py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-xs sm:text-base">Out of Subscription</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -198,20 +254,39 @@
               </div>
               <h3 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Fax & OCR</h3>
             </div>
-            <div class="overflow-x-auto -mx-4 sm:mx-0">
+            <!-- Mobile Card Layout -->
+            <div class="md:hidden space-y-3">
+              <div
+                v-for="(item, fidx) in faxOcrRates"
+                :key="fidx"
+                class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-200 dark:border-gray-600"
+              >
+                <div class="font-semibold text-gray-900 dark:text-white mb-3 text-sm">{{ item.type }}</div>
+                <div class="grid grid-cols-2 gap-3">
+                  <div>
+                    <div class="text-xs text-gray-500 dark:text-gray-400 mb-1">In Subscription</div>
+                    <span class="inline-flex items-center px-2 py-1 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 font-bold text-sm">
+                      ${{ item.inSubscription }}
+                    </span>
+                  </div>
+                  <div>
+                    <div class="text-xs text-gray-500 dark:text-gray-400 mb-1">Out of Subscription</div>
+                    <span class="inline-flex items-center px-2 py-1 rounded-lg bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400 font-bold text-sm">
+                      ${{ item.outOfSubscription }}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Desktop Table Layout -->
+            <div class="hidden md:block overflow-x-auto -mx-4 sm:mx-0">
               <div class="inline-block min-w-full align-middle px-4 sm:px-0">
-                <table class="w-full min-w-[600px]">
+                <table class="w-full">
                   <thead>
                     <tr class="border-b-2 border-gray-200 dark:border-gray-700">
                       <th class="text-left py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-sm sm:text-base">Type</th>
-                      <th class="text-center py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-xs sm:text-base">
-                        <span class="hidden sm:inline">In Subscription</span>
-                        <span class="sm:hidden">In Sub</span>
-                      </th>
-                      <th class="text-center py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-xs sm:text-base">
-                        <span class="hidden sm:inline">Out of Subscription</span>
-                        <span class="sm:hidden">Out of Sub</span>
-                      </th>
+                      <th class="text-center py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-xs sm:text-base">In Subscription</th>
+                      <th class="text-center py-3 px-3 sm:py-4 sm:px-6 font-semibold text-gray-900 dark:text-white text-xs sm:text-base">Out of Subscription</th>
                     </tr>
                   </thead>
                   <tbody>

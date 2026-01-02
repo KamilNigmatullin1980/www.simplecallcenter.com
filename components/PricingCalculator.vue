@@ -101,26 +101,21 @@
           </div>
 
           <!-- Transcription -->
-          <div 
-            class="bg-white dark:bg-gray-800 rounded-xl p-5 border border-gray-200 dark:border-gray-700"
-            :class="{ 'opacity-50': !recordingEnabled }"
-          >
+          <div class="bg-white dark:bg-gray-800 rounded-xl p-5 border border-gray-200 dark:border-gray-700">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-3">
                 <i class="uil uil-file-alt text-purple-600 dark:text-purple-400 text-2xl"></i>
                 <div>
                   <span class="font-semibold text-gray-900 dark:text-white text-base block">Transcription</span>
                   <span class="text-xs text-gray-500 dark:text-gray-400">+$0.012/min</span>
-                  <span v-if="!recordingEnabled" class="text-xs text-orange-500 dark:text-orange-400 block mt-1">Requires recording</span>
+                  <span class="text-xs text-gray-500 dark:text-gray-400 block mt-1">Auto-enables recording</span>
                 </div>
               </div>
               <button
                 @click="toggleTranscription"
-                :disabled="!recordingEnabled"
                 :class="[
                   'relative inline-flex h-7 w-14 items-center rounded-full transition-colors',
-                  transcriptionEnabled ? 'bg-purple-600' : 'bg-gray-300 dark:bg-gray-600',
-                  !recordingEnabled && 'cursor-not-allowed'
+                  transcriptionEnabled ? 'bg-purple-600' : 'bg-gray-300 dark:bg-gray-600'
                 ]"
               >
                 <span
@@ -134,26 +129,21 @@
           </div>
 
           <!-- AI Features -->
-          <div 
-            class="bg-white dark:bg-gray-800 rounded-xl p-5 border border-gray-200 dark:border-gray-700"
-            :class="{ 'opacity-50': !transcriptionEnabled }"
-          >
+          <div class="bg-white dark:bg-gray-800 rounded-xl p-5 border border-gray-200 dark:border-gray-700">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-3">
                 <i class="uil uil-brain text-purple-600 dark:text-purple-400 text-2xl"></i>
                 <div>
                   <span class="font-semibold text-gray-900 dark:text-white text-base block">AI Features</span>
                   <span class="text-xs text-gray-500 dark:text-gray-400">$0.02/call</span>
-                  <span v-if="!transcriptionEnabled" class="text-xs text-orange-500 dark:text-orange-400 block mt-1">Requires transcription</span>
+                  <span class="text-xs text-gray-500 dark:text-gray-400 block mt-1">Auto-enables transcription + recording</span>
                 </div>
               </div>
               <button
                 @click="toggleAI"
-                :disabled="!transcriptionEnabled"
                 :class="[
                   'relative inline-flex h-7 w-14 items-center rounded-full transition-colors',
-                  aiEnabled ? 'bg-purple-600' : 'bg-gray-300 dark:bg-gray-600',
-                  !transcriptionEnabled && 'cursor-not-allowed'
+                  aiEnabled ? 'bg-purple-600' : 'bg-gray-300 dark:bg-gray-600'
                 ]"
               >
                 <span
@@ -196,32 +186,49 @@
         <div class="bg-white dark:bg-gray-800 rounded-xl border-2 border-purple-300 dark:border-purple-700 p-6">
           <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-6 text-center">What You Get for ${{ selectedPlan }}/month</h3>
           
-          <!-- Main Minutes Display -->
-          <div class="bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-gray-700 dark:to-gray-800 rounded-xl p-6 mb-6">
-            <div class="text-center">
-              <div class="text-5xl sm:text-6xl font-extrabold text-purple-600 dark:text-purple-400 mb-2">
-                {{ affordableMinutes.toLocaleString() }}
+          <!-- Minutes and Calls Display (stacked on mobile, side by side on desktop) -->
+          <div class="flex flex-col sm:flex-row items-center gap-3 mb-6">
+            <!-- Minutes Box -->
+            <div class="w-full sm:flex-1 bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-gray-700 dark:to-gray-800 rounded-xl p-5">
+              <div class="text-center">
+                <div class="text-4xl sm:text-5xl font-extrabold text-purple-600 dark:text-purple-400 mb-2">
+                  {{ affordableMinutes.toLocaleString() }}
+                </div>
+                <div class="text-base sm:text-lg text-gray-700 dark:text-gray-300 font-semibold">
+                  minutes
+                </div>
+                <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                  (~{{ affordableHours }} hours)
+                </div>
               </div>
-              <div class="text-lg sm:text-xl text-gray-700 dark:text-gray-300 font-semibold">
-                minutes (~{{ affordableHours }} hours)
-              </div>
-              <div class="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                of {{ callType }} calling
+            </div>
+
+            <!-- OR Divider (rotated on mobile, vertical on desktop) -->
+            <div class="flex-shrink-0 py-2 sm:py-0 sm:px-2">
+              <div class="text-xl font-bold text-gray-400 dark:text-gray-500">OR</div>
+            </div>
+
+            <!-- Calls Box -->
+            <div class="w-full sm:flex-1 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-700 dark:to-gray-800 rounded-xl p-5">
+              <div class="text-center">
+                <div class="text-4xl sm:text-5xl font-extrabold text-purple-600 dark:text-purple-400 mb-2">
+                  {{ affordableCalls }}
+                </div>
+                <div class="text-base sm:text-lg text-gray-700 dark:text-gray-300 font-semibold">
+                  calls
+                </div>
+                <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                  ({{ avgCallDuration }} min each<span v-if="aiEnabled"> + AI</span>)
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Call Breakdown -->
-          <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 mb-4">
-            <div class="flex items-start gap-3">
-              <i class="uil uil-phone-alt text-blue-600 dark:text-blue-400 text-xl mt-0.5"></i>
-              <div class="flex-1">
-                <p class="text-sm font-semibold text-gray-900 dark:text-white mb-1">Estimated Call Volume:</p>
-                <p class="text-sm text-gray-700 dark:text-gray-300">
-                  You can handle approximately <strong>{{ affordableCalls }}</strong> calls of {{ avgCallDuration }} minutes each
-                  <span v-if="aiEnabled" class="block mt-1 text-xs text-gray-600 dark:text-gray-400">(including AI summaries & evaluation at $0.02/call)</span>
-                </p>
-              </div>
+          <!-- Additional Context -->
+          <div class="bg-gray-50 dark:bg-gray-900/50 rounded-lg p-4 mb-4">
+            <div class="text-center text-sm text-gray-600 dark:text-gray-400">
+              <span class="font-medium text-gray-900 dark:text-white">{{ callType === 'inbound' ? 'Inbound' : 'Outbound' }} calling</span>
+              <span v-if="aiEnabled" class="block mt-1">(including AI summaries & evaluation at $0.02/call)</span>
             </div>
           </div>
 
@@ -280,17 +287,25 @@ const toggleRecording = () => {
 }
 
 const toggleTranscription = () => {
-  if (!recordingEnabled.value) return // Can't enable if recording is off
   transcriptionEnabled.value = !transcriptionEnabled.value
-  // If turning off transcription, also turn off AI
-  if (!transcriptionEnabled.value) {
+  
+  if (transcriptionEnabled.value) {
+    // If turning on transcription, automatically enable recording
+    recordingEnabled.value = true
+  } else {
+    // If turning off transcription, also turn off AI
     aiEnabled.value = false
   }
 }
 
 const toggleAI = () => {
-  if (!transcriptionEnabled.value) return // Can't enable if transcription is off
   aiEnabled.value = !aiEnabled.value
+  
+  if (aiEnabled.value) {
+    // If turning on AI, automatically enable transcription and recording
+    transcriptionEnabled.value = true
+    recordingEnabled.value = true
+  }
 }
 
 // Computed: Cost per minute based on enabled features

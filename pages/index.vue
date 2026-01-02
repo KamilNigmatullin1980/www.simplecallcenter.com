@@ -13,8 +13,8 @@
         A Real <span class="text-blue-800 dark:text-blue-300">Call Center</span> Platform
       </h1> -->
         <h1 class="text-4xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
-          Your team talks to customers.<br>
-          <span class="text-purple-800 dark:text-purple-300"> Our AI handles the rest.</span><br>
+          Your real team talks to customers.<br>
+          <span class="text-purple-800 dark:text-purple-300"> Our AI handles the busywork.</span><br>
           <!-- <span class="text-purple-800 dark:text-purple-300"> No Per-Seat Fees. <br>Test Live with Free Credit.</span> -->
         </h1>
         
@@ -463,28 +463,33 @@
       </div>
 
       <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          <div 
-            v-for="(feature, idx) in features" 
-            :key="idx" 
-            class="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 p-6 lg:p-8 hover:shadow-2xl hover:border-purple-300 dark:hover:border-purple-600 transition-all duration-300 transform hover:-translate-y-1 overflow-hidden"
-          >
-            <!-- Gradient background on hover -->
-            <div class="absolute inset-0 bg-gradient-to-br from-purple-50/0 to-blue-50/0 group-hover:from-purple-50/50 group-hover:to-blue-50/30 dark:group-hover:from-purple-900/10 dark:group-hover:to-blue-900/10 transition-all duration-300"></div>
-            
-            <!-- Icon Container -->
-            <div class="relative mb-4">
-              <div class="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600 group-hover:from-purple-600 group-hover:to-indigo-700 shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110">
-                <div class="text-white" v-html="feature.icon"></div>
+        <div v-for="(group, groupIdx) in featureGroups" :key="groupIdx" class="mb-12">
+          <p class="text-base text-gray-700 dark:text-gray-300 mb-6 max-w-4xl mx-auto leading-relaxed">
+            {{ group.intro }}
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            <div 
+              v-for="(feature, idx) in group.features" 
+              :key="idx" 
+              class="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 p-6 lg:p-8 hover:shadow-2xl hover:border-purple-300 dark:hover:border-purple-600 transition-all duration-300 transform hover:-translate-y-1 overflow-hidden"
+            >
+              <!-- Gradient background on hover -->
+              <div class="absolute inset-0 bg-gradient-to-br from-purple-50/0 to-blue-50/0 group-hover:from-purple-50/50 group-hover:to-blue-50/30 dark:group-hover:from-purple-900/10 dark:group-hover:to-blue-900/10 transition-all duration-300"></div>
+              
+              <!-- Icon Container -->
+              <div class="relative mb-4">
+                <div class="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600 group-hover:from-purple-600 group-hover:to-indigo-700 shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110">
+                  <div class="text-white" v-html="feature.icon"></div>
+                </div>
               </div>
-            </div>
-            
-            <!-- Content -->
-            <div class="relative">
-              <h3 class="text-lg lg:text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-purple-700 dark:group-hover:text-purple-400 transition-colors">
-                {{ feature.title }}
-              </h3>
-              <p class="text-sm lg:text-base text-gray-600 dark:text-gray-300 leading-relaxed">{{ feature.description }}</p>
+              
+              <!-- Content -->
+              <div class="relative">
+                <h3 class="text-lg lg:text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-purple-700 dark:group-hover:text-purple-400 transition-colors">
+                  {{ feature.title }}
+                </h3>
+                <p class="text-sm lg:text-base text-gray-600 dark:text-gray-300 leading-relaxed">{{ feature.description }}</p>
+              </div>
             </div>
           </div>
         </div>
@@ -645,69 +650,89 @@ useHead({
   ],
 })
 
-const features = [
+const featureGroups = [
   {
-    icon: `<svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    intro: 'Call centers need reliable infrastructure to handle incoming calls and connect agents to the system. Businesses typically use a desktop application for daily operations, a phone number for customer contact, and SIP compatibility for existing phone hardware.',
+    features: [
+      {
+        icon: `<svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
     </svg>`,
-    title: 'Agent Desktop App',
-    description: 'Persistent Electron app with calls, follow-ups, voicemails, dashboards — no browser tabs needed'
-  },
-  {
-    icon: `<svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        title: 'Agent Desktop App',
+        description: 'Persistent Electron app with calls, follow-ups, voicemails, dashboards — no browser tabs needed'
+      },
+      {
+        icon: `<svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
     </svg>`,
-    title: 'One Included Number',
-    description: 'Every call center includes 1 voice + fax number (US/Canada) — more available for $7/mo'
-  },
-  {
-    icon: `<svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        title: 'One Included Number',
+        description: 'Every call center includes 1 voice + fax number (US/Canada) — more available for $7/mo'
+      },
+      {
+        icon: `<svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
     </svg>`,
-    title: 'SIP Phone Support',
-    description: 'Use with softphones or hardware SIP phones — standalone or in parallel with the app'
+        title: 'SIP Phone Support',
+        description: 'Use with softphones or hardware SIP phones — standalone or in parallel with the app'
+      }
+    ]
   },
   {
-    icon: `<svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    intro: 'Inbound calls require routing logic to direct callers to the right department or agent. IVR systems handle initial caller input, while queues manage call distribution based on agent availability and business rules.',
+    features: [
+      {
+        icon: `<svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
     </svg>`,
-    title: 'Smart IVRs',
-    description: 'Auto-generated based on your queues and languages. Text-to-speech in 80+ languages. Supports voice commands + keypad input (simultaneously)'
-  },
-  {
-    icon: `<svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        title: 'Smart IVRs',
+        description: 'Auto-generated based on your queues and languages. Text-to-speech in 80+ languages. Supports voice commands + keypad input (simultaneously)'
+      },
+      {
+        icon: `<svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
     </svg>`,
-    title: 'Call Queues & Routing',
-    description: 'Unlimited queues + schedules. Call waiting, position announcements, voicemail fallback with timers. Voicemails are assignable and trackable ("Processing," "Closed")'
+        title: 'Call Queues & Routing',
+        description: 'Unlimited queues + schedules. Call waiting, position announcements, voicemail fallback with timers. Voicemails are assignable and trackable ("Processing," "Closed")'
+      }
+    ]
   },
   {
-    icon: `<svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    intro: 'Supervisors need visibility into call center operations to monitor performance and provide support. Real-time dashboards show current activity, while coaching tools allow managers to assist agents during live calls.',
+    features: [
+      {
+        icon: `<svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
     </svg>`,
-    title: 'Live Coaching',
-    description: 'Supervisors can listen, whisper, or join live calls. Flagged calls (via AI scoring) shown for review'
-  },
-  {
-    icon: `<svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        title: 'Live Coaching',
+        description: 'Supervisors can listen, whisper, or join live calls. Flagged calls (via AI scoring) shown for review'
+      },
+      {
+        icon: `<svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
     </svg>`,
-    title: 'Live Dashboard',
-    description: 'Real-time call activity, agent status, queue metrics — no refresh'
+        title: 'Live Dashboard',
+        description: 'Real-time call activity, agent status, queue metrics — no refresh'
+      }
+    ]
   },
   {
-    icon: `<svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    intro: 'Teams need straightforward ways to add new members and enable internal communication. Onboarding should be quick, and agents need to collaborate through transfers and internal calling without external phone numbers.',
+    features: [
+      {
+        icon: `<svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
     </svg>`,
-    title: 'Magic-Link Onboarding',
-    description: 'Send one link, they join instantly with Google or email login. No passwords. App download offered right after sign-up.'
-  },
-  {
-    icon: `<svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        title: 'Magic-Link Onboarding',
+        description: 'Send one link, they join instantly with Google or email login. No passwords. App download offered right after sign-up.'
+      },
+      {
+        icon: `<svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
     </svg>`,
-    title: 'Internal Extensions',
-    description: 'Every user gets an internal SIP number — agents can transfer, call, and hold each other like a real business.'
+        title: 'Internal Extensions',
+        description: 'Every user gets an internal SIP number — agents can transfer, call, and hold each other like a real business.'
+      }
+    ]
   }
 ]
 </script>
