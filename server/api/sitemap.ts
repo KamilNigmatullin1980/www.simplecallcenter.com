@@ -50,7 +50,6 @@ export default defineSitemapEventHandler(() => {
     '/how-it-works/ai_summaries',
     '/how-it-works/billing_usage',
     '/how-it-works/hubspot_integration',
-    '/how-it-works/hubspot-integration',
     '/how-it-works/inbound_calls',
     '/how-it-works/inbound_calls_direct_phone',
     '/how-it-works/inbound_fax',
@@ -59,7 +58,6 @@ export default defineSitemapEventHandler(() => {
     '/how-it-works/queues_routing',
     '/how-it-works/voicemail_follow_ups',
     '/how-it-works/zoho_integration',
-    '/how-it-works/zoho-integration',
   ]
 
   return routes.map(route => ({
