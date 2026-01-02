@@ -21,7 +21,13 @@ export default defineNuxtConfig({
     exclude: ['/admin/**', '/test/**'],
     sources: [
       '/api/sitemap'
-    ]
+    ],
+    defaults: {
+      changefreq: 'monthly',
+      priority: 0.8,
+      lastmod: new Date().toISOString(),
+    },
+    xsl: false,
   },
   app: {
     head: {

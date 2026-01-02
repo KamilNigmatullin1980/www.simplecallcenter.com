@@ -1,13 +1,29 @@
 export default defineSitemapEventHandler(() => {
   const routes = [
+    // Main pages
     '/',
     '/about',
     '/pricing',
     '/faq',
-    '/bloge',
     '/privacy-policy',
     '/terms-of-services',
     '/features',
+    '/how-it-works',
+    
+    // Landing pages
+    '/ai-call-center-software',
+    '/aircall-alternative',
+    '/call-recording-call-monitoring',
+    '/cloud-call-center-software',
+    '/customer-support-call-center-software',
+    '/inbound-call-center-software',
+    '/ivr-call-routing',
+    '/sales-call-center-software',
+    '/small-business-call-center-software',
+    '/usage-based-call-center-pricing',
+    '/virtual-call-center-software',
+    
+    // Feature pages
     '/features/automatic-call-distribution',
     '/features/automatic-schedule-redirect',
     '/features/desktop-softphone',
@@ -28,6 +44,22 @@ export default defineSitemapEventHandler(() => {
     '/features/speech-recognition',
     '/features/supervisor-assistance',
     '/features/visual-call-flow-and-advanced-cdr',
+    
+    // How it works pages
+    '/how-it-works/ai_agent_efficiency',
+    '/how-it-works/ai_summaries',
+    '/how-it-works/billing_usage',
+    '/how-it-works/hubspot_integration',
+    '/how-it-works/hubspot-integration',
+    '/how-it-works/inbound_calls',
+    '/how-it-works/inbound_calls_direct_phone',
+    '/how-it-works/inbound_fax',
+    '/how-it-works/missed_calls_follow_ups',
+    '/how-it-works/outbound_calls',
+    '/how-it-works/queues_routing',
+    '/how-it-works/voicemail_follow_ups',
+    '/how-it-works/zoho_integration',
+    '/how-it-works/zoho-integration',
   ]
 
   return routes.map(route => ({
@@ -37,6 +69,7 @@ export default defineSitemapEventHandler(() => {
     lastmod: new Date().toISOString(),
   }))
 })
+
 
 
 
