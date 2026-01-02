@@ -21,8 +21,21 @@
       twitterCard: 'summary_large_image',
     });
     
+    const structuredData = useStructuredData({
+      type: 'WebPage',
+      name: title,
+      description: description,
+      url: url.value,
+    });
+    
     useHead({
       link: [{ rel: 'canonical', href: url.value }],
+      script: [
+        {
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify(structuredData),
+        },
+      ],
     });
     
     const pricingHref = '/pricing/';

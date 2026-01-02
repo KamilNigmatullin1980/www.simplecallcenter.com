@@ -129,6 +129,24 @@ useHead({
     },
     { property: 'og:type', content: 'website' },
   ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'About Us | SimpleCallCenter',
+        description: 'SimpleCallCenter is built by real people for real support teams. Learn about our mission, values, and commitment to transparent pricing and customer-first design.',
+        url: 'https://www.simplecallcenter.com/about',
+        publisher: {
+          '@type': 'Organization',
+          name: 'Simple Communications, LLC',
+          alternateName: 'SimpleCallCenter',
+          url: 'https://www.simplecallcenter.com',
+        },
+      }),
+    },
+  ],
 })
 </script>
 

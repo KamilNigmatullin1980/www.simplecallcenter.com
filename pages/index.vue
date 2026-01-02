@@ -146,6 +146,15 @@
                 <span>Provide insights without extra tools or manual review</span>
               </li>
             </ul>
+            <NuxtLink 
+              to="/ai-call-center-software/" 
+              class="mt-4 inline-flex items-center text-sm text-purple-600 dark:text-purple-400 font-medium hover:text-purple-700 dark:hover:text-purple-300 transition-colors"
+            >
+              Learn more about AI call center features
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </NuxtLink>
           </div>
 
           <!-- Box 3 — Best Part -->
@@ -161,10 +170,10 @@
               You only pay for what you use — calls, AI, integrations — at some of the lowest rates you'll find anywhere.
             </p>
             <p class="text-base font-semibold text-gray-900 dark:text-white mb-2">
-              Voice calls are just $0.0025 per minute.
+              Voice calls are just $0.0025 per minute (not a typo).
             </p>
-            <p class="text-sm text-gray-600 dark:text-gray-400 italic mb-3">
-              (Seriously. That's not a typo.)
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">
+              Inbound US/CA, usage-based, PSTN included for inbound.
             </p>
             <p class="text-base text-gray-600 dark:text-gray-300 mb-3">
               Want AI call summaries, scoring, or transcription? Enable them when you need them — billed separately, only if used.
@@ -346,6 +355,15 @@
                 <div class="flex-1">
                   <span class="inline-block px-3 py-1 text-xs font-semibold text-green-700 dark:text-green-300 bg-green-100 dark:bg-green-900/50 rounded-full mb-2">Recording</span>
                   <p class="text-base font-medium text-gray-900 dark:text-gray-100">Call recording</p>
+                  <NuxtLink 
+                    to="/call-recording-call-monitoring/" 
+                    class="mt-2 inline-flex items-center text-xs text-green-700 dark:text-green-300 font-medium hover:text-green-800 dark:hover:text-green-200 transition-colors"
+                  >
+                    Learn more about call recording & monitoring
+                    <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </NuxtLink>
                 </div>
               </div>
               <div class="flex items-start gap-3 p-4 bg-orange-50 dark:bg-orange-900/20 rounded-lg border-2 border-orange-200 dark:border-orange-800">
@@ -467,11 +485,26 @@
           <p class="text-base text-gray-700 dark:text-gray-300 mb-6 max-w-4xl mx-auto leading-relaxed">
             {{ group.intro }}
           </p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div 
+            :class="[
+              group.features.length === 1 
+                ? 'flex justify-center' 
+                : group.features.length === 2 
+                  ? 'flex flex-wrap justify-center gap-6 lg:gap-8' 
+                  : 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8'
+            ]"
+          >
             <div 
               v-for="(feature, idx) in group.features" 
               :key="idx" 
-              class="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 p-6 lg:p-8 hover:shadow-2xl hover:border-purple-300 dark:hover:border-purple-600 transition-all duration-300 transform hover:-translate-y-1 overflow-hidden"
+              :class="[
+                'group relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 p-6 lg:p-8 hover:shadow-2xl hover:border-purple-300 dark:hover:border-purple-600 transition-all duration-300 transform hover:-translate-y-1 overflow-hidden',
+                group.features.length === 1 
+                  ? 'w-full max-w-md' 
+                  : group.features.length === 2 
+                    ? 'w-full sm:w-[calc(50%-12px)] lg:w-[calc(50%-16px)] max-w-md' 
+                    : ''
+              ]"
             >
               <!-- Gradient background on hover -->
               <div class="absolute inset-0 bg-gradient-to-br from-purple-50/0 to-blue-50/0 group-hover:from-purple-50/50 group-hover:to-blue-50/30 dark:group-hover:from-purple-900/10 dark:group-hover:to-blue-900/10 transition-all duration-300"></div>

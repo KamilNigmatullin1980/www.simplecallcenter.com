@@ -1,4 +1,21 @@
 <template>
+  <!-- Call Center Solutions Links (above footer) -->
+  <div class="bg-gray-100 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
+    <div class="max-w-5xl mx-auto px-4 py-3">
+      <div class="flex flex-col md:flex-row md:flex-wrap gap-y-1 md:gap-x-6 text-xs text-gray-600 dark:text-gray-400">
+        <span class="font-medium text-gray-700 dark:text-gray-300 mb-1 md:mb-0">Call Center Solutions:</span>
+        <NuxtLink to="/inbound-call-center-software/" class="hover:text-purple-600 dark:hover:text-purple-400 hover:underline">Inbound Call Center Software</NuxtLink>
+        <NuxtLink to="/cloud-call-center-software/" class="hover:text-purple-600 dark:hover:text-purple-400 hover:underline">Cloud Call Center Software</NuxtLink>
+        <NuxtLink to="/virtual-call-center-software/" class="hover:text-purple-600 dark:hover:text-purple-400 hover:underline">Virtual Call Center Software</NuxtLink>
+        <NuxtLink to="/small-business-call-center-software/" class="hover:text-purple-600 dark:hover:text-purple-400 hover:underline">Small Business Call Center</NuxtLink>
+        <NuxtLink to="/sales-call-center-software/" class="hover:text-purple-600 dark:hover:text-purple-400 hover:underline">Sales Call Center Software</NuxtLink>
+        <NuxtLink to="/call-recording-call-monitoring/" class="hover:text-purple-600 dark:hover:text-purple-400 hover:underline">Call Recording & Monitoring</NuxtLink>
+        <NuxtLink to="/ai-call-center-software/" class="hover:text-purple-600 dark:hover:text-purple-400 hover:underline">AI Call Center Software</NuxtLink>
+        <NuxtLink to="/aircall-alternative/" class="hover:text-purple-600 dark:hover:text-purple-400 hover:underline">Aircall Alternative</NuxtLink>
+      </div>
+    </div>
+  </div>
+
   <!-- Footer -->
   <footer class="bg-purple-900 dark:bg-gray-800 text-white">
     <div class="max-w-5xl mx-auto px-4 py-10">

@@ -578,6 +578,25 @@ useHead({
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://simplecallcenter.com/pricing' },
   ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'Pricing | SimpleCallCenter',
+        description:
+          'Simple, usage-based pricing for inbound callcenters. Choose from flexible plans with included usage for minutes, recording, transcription & AI.',
+        url: 'https://www.simplecallcenter.com/pricing',
+        publisher: {
+          '@type': 'Organization',
+          name: 'Simple Communications, LLC',
+          alternateName: 'SimpleCallCenter',
+          url: 'https://www.simplecallcenter.com',
+        },
+      }),
+    },
+  ],
 })
 
 // All features included in all callcenter plans

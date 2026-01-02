@@ -24,6 +24,25 @@ useHead({
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://simplecallcenter.com/privacy-policy' },
   ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'Privacy Policy | SimpleCallCenter',
+        description:
+          'Privacy Policy for the SAAS Call Center Product by SimpleCallCenter. Review how we collect, use, and protect your personal information.',
+        url: 'https://www.simplecallcenter.com/privacy-policy',
+        publisher: {
+          '@type': 'Organization',
+          name: 'Simple Communications, LLC',
+          alternateName: 'SimpleCallCenter',
+          url: 'https://www.simplecallcenter.com',
+        },
+      }),
+    },
+  ],
 })
 </script>
 

@@ -23,6 +23,24 @@
     
     useHead({
       link: [{ rel: 'canonical', href: url.value }],
+      script: [
+        {
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: title,
+            description: description,
+            url: url.value,
+            publisher: {
+              '@type': 'Organization',
+              name: 'Simple Communications, LLC',
+              alternateName: 'SimpleCallCenter',
+              url: 'https://www.simplecallcenter.com',
+            },
+          }),
+        },
+      ],
     });
     
     const pricingHref = '/pricing/';

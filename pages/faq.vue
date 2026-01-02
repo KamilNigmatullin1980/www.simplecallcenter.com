@@ -32,20 +32,29 @@
 import { useHead } from '#imports'
 import image from '~/assets/images/bg/bg-startup.webp'
 
+const title = 'FAQ | SimpleCallCenter'
+const description = 'Find answers to common questions about SimpleCallCenter. Learn about pricing, setup, features, integrations, and more.'
+
+const structuredData = useStructuredData({
+  type: 'FAQPage',
+  name: 'Frequently Asked Questions about SimpleCallCenter',
+  description: description,
+  url: '/faq',
+})
+
 useHead({
-  title: 'FAQ | SimpleCallCenter',
+  title,
   meta: [
     {
       name: 'description',
-      content:
-        'Find answers to common questions about SimpleCallCenter. Learn about pricing, setup, features, integrations, and more.',
+      content: description,
     },
     {
       name: 'keywords',
       content:
         'SimpleCallCenter FAQ, call center software questions, pricing and billing, setup guide, features overview, integrations, call routing, AI call summaries, support',
     },
-    { property: 'og:title', content: 'FAQ | SimpleCallCenter' },
+    { property: 'og:title', content: title },
     {
       property: 'og:description',
       content:
@@ -53,6 +62,12 @@ useHead({
     },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://simplecallcenter.com/faq' },
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify(structuredData),
+    },
   ],
 })
 </script>

@@ -86,6 +86,25 @@
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://simplecallcenter.com/features' },
     ],
+    script: [
+      {
+        type: 'application/ld+json',
+        innerHTML: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'WebPage',
+          name: 'Features | SimpleCallCenter',
+          description:
+            'Discover the robust features of SimpleCallCenter including AI-based automated setup, multilingual IVR, integrated web phone, CRM integrations (HubSpot & Zoho), and advanced call center tools designed for business efficiency.',
+          url: 'https://www.simplecallcenter.com/features',
+          publisher: {
+            '@type': 'Organization',
+            name: 'Simple Communications, LLC',
+            alternateName: 'SimpleCallCenter',
+            url: 'https://www.simplecallcenter.com',
+          },
+        }),
+      },
+    ],
   })
   
   const cc_features = ref([

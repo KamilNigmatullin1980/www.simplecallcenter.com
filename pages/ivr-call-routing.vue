@@ -1,8 +1,10 @@
 <script setup lang="ts">
     const runtimeConfig = useRuntimeConfig();
-    const siteUrl =
-      (runtimeConfig.public?.siteUrl as string) || 'https://www.simplecallcenter.com';
-    const url = `${siteUrl.replace(/\/$/, '')}/ivr-call-routing/`;
+    const url = computed(() => {
+      const siteUrl = (runtimeConfig.public?.siteUrl as string) || 'https://www.simplecallcenter.com';
+      const baseUrl = siteUrl.endsWith('/') ? siteUrl.slice(0, -1) : siteUrl;
+      return baseUrl + '/ivr-call-routing/';
+    });
     
     const title = 'IVR Call Routing Software (Menus, Business Hours, Queues) | SimpleCallCenter';
     const description =
@@ -14,12 +16,30 @@
       ogTitle: title,
       ogDescription: description,
       ogType: 'website',
-      ogUrl: url,
+      ogUrl: url.value,
       twitterCard: 'summary_large_image',
     });
     
     useHead({
-      link: [{ rel: 'canonical', href: url }],
+      link: [{ rel: 'canonical', href: url.value }],
+      script: [
+        {
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: title,
+            description: description,
+            url: url.value,
+            publisher: {
+              '@type': 'Organization',
+              name: 'Simple Communications, LLC',
+              alternateName: 'SimpleCallCenter',
+              url: 'https://www.simplecallcenter.com',
+            },
+          }),
+        },
+      ],
     });
     
     const primaryCtaHref = 'https://my.simplecallcenter.com/signup';

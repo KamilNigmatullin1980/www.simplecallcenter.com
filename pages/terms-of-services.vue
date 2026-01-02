@@ -27,6 +27,25 @@ useHead({
       content: 'https://simplecallcenter.com/terms-of-service',
     },
   ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'Terms of Service | SimpleCallCenter',
+        description:
+          'Terms of Service for the SAAS Call Center Product by SimpleCallCenter. Review the terms and conditions governing your use of our service.',
+        url: 'https://www.simplecallcenter.com/terms-of-services',
+        publisher: {
+          '@type': 'Organization',
+          name: 'Simple Communications, LLC',
+          alternateName: 'SimpleCallCenter',
+          url: 'https://www.simplecallcenter.com',
+        },
+      }),
+    },
+  ],
 })
 </script>
 
