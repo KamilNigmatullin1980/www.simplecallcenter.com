@@ -44,7 +44,7 @@
             </li>
             <li class="flex items-center">
               <i data-feather="phone" class="inline-block w-4 h-4 mr-2"></i>
-              <a href="tel:+14245073330" class="hover:underline">+1 (424) 507 3330</a>
+              <a href="tel:+13233758333" class="hover:underline">+1 (323) 375 8333</a>
             </li>
           </ul>
         </div>
