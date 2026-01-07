@@ -2,10 +2,52 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
+    build: {
+      cssCodeSplit: true,
+      cssMinify: true,
+      rollupOptions: {
+        output: {
+          assetFileNames: (assetInfo) => {
+            if (assetInfo.name && assetInfo.name.endsWith('.css')) {
+              return 'css/[name]-[hash][extname]';
+            }
+            return 'assets/[name]-[hash][extname]';
+          }
+        }
+      }
+    }
   },
   devtools: { enabled: false },
   ssr: true, // Disable SSR for static site generation
   css: ["~/assets/app.css"],
+  hooks: {
+    'render:html': (html, { event }) => {
+      // Optimize CSS loading by making stylesheets non-render-blocking
+      const noscriptTags: string[] = []
+      
+      html.head = html.head.map((tag: string) => {
+        if (tag.includes('rel="stylesheet"') && !tag.includes('data-optimized') && !tag.includes('noscript')) {
+          // Extract the href for noscript fallback
+          const hrefMatch = tag.match(/href="([^"]+)"/)
+          if (hrefMatch) {
+            noscriptTags.push(`<noscript><link rel="stylesheet" href="${hrefMatch[1]}"></noscript>`)
+          }
+          
+          // Add media="print" to make CSS load asynchronously, then switch to 'all' when loaded
+          return tag.replace(
+            /rel="stylesheet"/,
+            'rel="stylesheet" media="print" onload="this.media=\'all\'"'
+          )
+        }
+        return tag
+      })
+      
+      // Add noscript fallbacks at the end
+      if (noscriptTags.length > 0) {
+        html.head.push(...noscriptTags)
+      }
+    }
+  },
   modules: [
     '@nuxtjs/sitemap',
     'nuxt-gtag',
@@ -35,6 +77,26 @@ export default defineNuxtConfig({
         lang: 'en'
       },
       link: [
+        // Critical: Preconnect to high-priority external domains FIRST (before other resources)
+        {
+          rel: 'preconnect',
+          href: 'https://unicons.iconscout.com',
+          crossorigin: 'anonymous'
+        },
+        {
+          rel: 'preconnect',
+          href: 'https://o4509069293518848.ingest.us.sentry.io',
+          crossorigin: 'anonymous'
+        },
+        // DNS prefetch for other domains
+        {
+          rel: 'dns-prefetch',
+          href: 'https://embed.tawk.to'
+        },
+        {
+          rel: 'dns-prefetch',
+          href: 'https://www.googletagmanager.com'
+        },
         // Favicon and Apple Touch Icons
         {
           rel: 'icon',
@@ -45,38 +107,6 @@ export default defineNuxtConfig({
           rel: 'apple-touch-icon',
           sizes: '180x180',
           href: '/apple-touch-icon.png'
-        },
-        // Preconnect to external domains for faster loading
-        {
-          rel: 'preconnect',
-          href: 'https://unicons.iconscout.com',
-          crossorigin: 'anonymous'
-        },
-        {
-          rel: 'preconnect',
-          href: 'https://embed.tawk.to',
-          crossorigin: 'anonymous'
-        },
-        {
-          rel: 'dns-prefetch',
-          href: 'https://unicons.iconscout.com'
-        },
-        {
-          rel: 'dns-prefetch',
-          href: 'https://embed.tawk.to'
-        },
-        {
-          rel: 'dns-prefetch',
-          href: 'https://www.googletagmanager.com'
-        },
-        {
-          rel: 'preconnect',
-          href: 'https://o4509069293518848.ingest.us.sentry.io',
-          crossorigin: 'anonymous'
-        },
-        {
-          rel: 'dns-prefetch',
-          href: 'https://o4509069293518848.ingest.us.sentry.io'
         }
       ],
       script: [
