@@ -55,6 +55,7 @@
               <div class="flex items-center gap-2 px-3 py-1.5 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-full border border-gray-200/50 dark:border-gray-700/50 shadow-sm">
                 <span class="text-xs font-semibold text-purple-600 dark:text-purple-400">1</span>
                 <span class="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">Sign up</span>
+                 <span class="text-xs text-gray-500 dark:text-gray-400">(1 click)</span>
               </div>
               <svg class="w-4 h-4 text-gray-400 dark:text-gray-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
