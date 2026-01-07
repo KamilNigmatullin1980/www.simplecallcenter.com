@@ -48,7 +48,54 @@
             <!-- Shine effect on hover -->
             <div class="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-shine transition-opacity duration-500"></div>
           </button>
-          No credit card • 2 minutes to setup
+          
+          <!-- 6-Step Strip -->
+          <div class="w-full max-w-5xl mx-auto mt-5 px-4">
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+              <div class="flex items-center gap-2 px-3 py-1.5 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-full border border-gray-200/50 dark:border-gray-700/50 shadow-sm">
+                <span class="text-xs font-semibold text-purple-600 dark:text-purple-400">1</span>
+                <span class="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">Sign up</span>
+              </div>
+              <svg class="w-4 h-4 text-gray-400 dark:text-gray-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+              <div class="flex items-center gap-2 px-3 py-1.5 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-full border border-gray-200/50 dark:border-gray-700/50 shadow-sm">
+                <span class="text-xs font-semibold text-purple-600 dark:text-purple-400">2</span>
+                <span class="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">Set hours</span>
+              </div>
+              <svg class="w-4 h-4 text-gray-400 dark:text-gray-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+              <div class="flex items-center gap-2 px-3 py-1.5 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-full border border-gray-200/50 dark:border-gray-700/50 shadow-sm">
+                <span class="text-xs font-semibold text-purple-600 dark:text-purple-400">3</span>
+                <span class="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">Languages</span>
+              </div>
+              <svg class="w-4 h-4 text-gray-400 dark:text-gray-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+              <div class="flex items-center gap-2 px-3 py-1.5 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-full border border-gray-200/50 dark:border-gray-700/50 shadow-sm">
+                <span class="text-xs font-semibold text-purple-600 dark:text-purple-400">4</span>
+                <span class="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">Queues</span>
+              </div>
+              <svg class="w-4 h-4 text-gray-400 dark:text-gray-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+              <div class="flex items-center gap-2 px-3 py-1.5 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-full border border-gray-200/50 dark:border-gray-700/50 shadow-sm">
+                <span class="text-xs font-semibold text-purple-600 dark:text-purple-400">5</span>
+                <span class="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">Agents</span>
+                <span class="text-xs text-gray-500 dark:text-gray-400">(optional)</span>
+              </div>
+              <svg class="w-4 h-4 text-gray-400 dark:text-gray-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+              <div class="flex items-center gap-2 px-3 py-1.5 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-full border border-gray-200/50 dark:border-gray-700/50 shadow-sm">
+                <span class="text-xs font-semibold text-purple-600 dark:text-purple-400">6</span>
+                <span class="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">Test</span>
+              </div>
+            </div>
+          </div>
+          
+          <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">No credit card • 2 minutes to setup</p>
           <div class="flex flex-col sm:flex-row gap-6 mt-6 max-w-5xl mx-auto">
             <!-- Box 1 — AI Credit -->
             <div class="flex-1 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-8 border border-gray-200 dark:border-gray-700 shadow-lg">

@@ -51,3 +51,4 @@ export const useStructuredData = (options: {
   return baseSchema
 }
 
+
